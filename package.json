@@ -1,6 +1,6 @@
 {
-  "name": "saas-demo",
-  "version": "0.0.0",
+  "name": "niu-be-admin",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "vite --open",
@@ -40,5 +40,8 @@
     "vite": "^5.2.8",
     "vite-plugin-svg-icons": "^2.0.1",
     "vue-tsc": "^2.0.11"
-  }
+  },
+  "repository": "https://github.com/z-pengfei/niu-be-admin.git",
+  "author": "梦屿孤独相伴。",
+  "license": "MIT"
 }
