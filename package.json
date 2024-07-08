@@ -16,6 +16,11 @@
     "lint:lint-staged": "lint-staged",
     "commit": "git-cz"
   },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --write",
@@ -62,6 +67,7 @@
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
+    "git-cz": "^4.9.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
     "npm-run-all2": "^6.1.2",
