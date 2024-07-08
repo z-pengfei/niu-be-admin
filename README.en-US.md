@@ -6,28 +6,28 @@
     <img src="https://img.shields.io/badge/Element Plus-2.7.4-blue.svg"/>
     <img src="https://img.shields.io/badge/license-MIT-green.svg"/>
     ![GitHub License](https://img.shields.io/github/license/z-pengfei/niu-be-admin)
-    <div align="center"> 中文 | <a href="./README.en-US.md">English</div>
+    <div align="center"> English | <a href="./README.md">中文</div>
 </div>
 
 ## 项目简介
 
-[niu-be-admin](https://github.com/z-pengfei/niu-be-admin.git) 是基于 Vue3 + Vite5+ TypeScript5 + Element-Plus + Pinia 等主流技术栈构建的免费开源的后台管理前端模板。
+[niu-be-admin](https://github.com/z-pengfei/niu-be-admin.git) is a free and open-source admin template for backend management frontend, built with popular technologies such as Vue3, Vite5, TypeScript, Element-Plus, and Pinia
 
-## 项目启动
+## Project Setup
 
 ```bash
-# 克隆代码
+# Clone the repository
 git clone https://github.com/z-pengfei/niu-be-admin.git
 
-# 进入目录
+# Enter directory
 cd niu-be-admin
 
-# 安装 pnpm
+# Install pnpm
 npm install pnpm -g
 
-# 安装依赖
+# Install dependencies
 pnpm install
 
-# 启动运行
+# Start the project
 pnpm dev
 ```
