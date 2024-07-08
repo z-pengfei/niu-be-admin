@@ -61,15 +61,15 @@ devDependencies:
   commitizen:
     specifier: ^4.3.0
     version: 4.3.0(@types/node@20.14.2)(typescript@5.4.5)
+  cz-git:
+    specifier: ^1.9.3
+    version: 1.9.3
   eslint:
     specifier: ^8.57.0
     version: 8.57.0
   eslint-plugin-vue:
     specifier: ^9.23.0
     version: 9.26.0(eslint@8.57.0)
-  git-cz:
-    specifier: ^4.9.0
-    version: 4.9.0
   husky:
     specifier: ^9.0.11
     version: 9.0.11
@@ -2225,6 +2225,11 @@ packages:
       - typescript
     dev: true
 
+  /cz-git@1.9.3:
+    resolution: {integrity: sha512-v7+vYOparImLLo6J5tAsi/cz+EAK7FI/TDnemi11xgEax4k+ZVqxsmkiEc68n+MJLp1l5THhB2KTDhjpW+ellg==, tarball: https://registry.npmmirror.com/cz-git/-/cz-git-1.9.3.tgz}
+    engines: {node: '>=v12.20.0'}
+    dev: true
+
   /dargs@8.1.0:
     resolution: {integrity: sha512-wAV9QHOsNbwnWdNW2FYvE1P56wtgSbM+3SZcdGiWQILwVjACCXDCI3Ai8QlCjMDB8YK5zySiXZYBiwGmNY3lnw==, tarball: https://registry.npmmirror.com/dargs/-/dargs-8.1.0.tgz}
     engines: {node: '>=12'}
@@ -3104,11 +3109,6 @@ packages:
   /get-value@2.0.6:
     resolution: {integrity: sha512-Ln0UQDlxH1BapMu3GPtf7CuYNwRZf2gwCuPqbyG6pB8WfmFpzqcy4xtAaAMUhnNqjMKTiCPZG2oMT3YSx8U2NA==, tarball: https://registry.npmmirror.com/get-value/-/get-value-2.0.6.tgz}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /git-cz@4.9.0:
-    resolution: {integrity: sha512-cSRL8IIOXU7UFLdbziCYqg8f8InwLwqHezkiRHNSph7oZqGv0togId1kMTfKil6gzK0VaSXeVBb4oDl0fQCHiw==, tarball: https://registry.npmmirror.com/git-cz/-/git-cz-4.9.0.tgz}
-    hasBin: true
     dev: true
 
   /git-raw-commits@4.0.0:
