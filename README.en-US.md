@@ -8,7 +8,7 @@
     <div align="center"> English | <a href="./README.md">中文</div>
 </div>
 
-## 项目简介
+## Project Introduction
 
 [niu-be-admin](https://github.com/z-pengfei/niu-be-admin.git) is a free and open-source admin template for backend management frontend, built with popular technologies such as Vue3, Vite5, TypeScript, Element-Plus, and Pinia
 
