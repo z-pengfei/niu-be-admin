@@ -12,7 +12,9 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
     "prepare": "husky install",
-    "commitlint": "commitlint --config commitlint.config.cjs -e -V"
+    "commitlint": "commitlint --config commitlint.config.cjs -e -V",
+    "lint:lint-staged": "lint-staged",
+    "commit": "git-cz"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
