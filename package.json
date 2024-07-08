@@ -34,12 +34,10 @@
     ],
     "*.vue": [
       "prettier --write",
-      "eslint --fix",
-      "stylelint --fix"
+      "eslint --fix"
     ],
     "*.{scss,less,styl,html}": [
-      "prettier --write",
-      "stylelint --fix"
+      "prettier --write"
     ],
     "*.md": [
       "prettier --write"
