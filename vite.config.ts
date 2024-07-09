@@ -16,6 +16,7 @@ import { resolve } from "path";
 const pathSrc = fileURLToPath(new URL("./src", import.meta.url));
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "./",
   plugins: [
     vue(),
     vueJsx(),
