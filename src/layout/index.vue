@@ -30,6 +30,10 @@ const { visitedViews } = storeToRefs(tagsViewStore);
 </script>
 
 <style lang="scss" scoped>
+.common-layout {
+  width: 100%;
+  height: 100%;
+}
 .el-aside {
   border-right: 1px solid var(--el-menu-border-color);
   transition: width 0.58s;

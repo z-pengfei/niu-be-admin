@@ -14,6 +14,9 @@ dependencies:
   element-plus:
     specifier: ^2.7.4
     version: 2.7.4(vue@3.4.27)
+  jsencrypt:
+    specifier: ^3.3.2
+    version: 3.3.2
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(typescript@5.4.5)(vue@3.4.27)
@@ -3739,6 +3742,10 @@ packages:
     dependencies:
       argparse: 2.0.1
     dev: true
+
+  /jsencrypt@3.3.2:
+    resolution: {integrity: sha512-arQR1R1ESGdAxY7ZheWr12wCaF2yF47v5qpB76TtV64H1pyGudk9Hvw8Y9tb/FiTIaaTRUyaSnm5T/Y53Ghm/A==, tarball: https://registry.npmmirror.com/jsencrypt/-/jsencrypt-3.3.2.tgz}
+    dev: false
 
   /jsesc@2.5.2:
     resolution: {integrity: sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==, tarball: https://registry.npmmirror.com/jsesc/-/jsesc-2.5.2.tgz}
