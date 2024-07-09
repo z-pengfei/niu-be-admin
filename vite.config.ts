@@ -17,9 +17,6 @@ const pathSrc = fileURLToPath(new URL("./src", import.meta.url));
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "/niu-be-admin/",
-  build: {
-    outDir: "docs"
-  },
   plugins: [
     vue(),
     vueJsx(),
