@@ -9,7 +9,7 @@
         <TabView />
         <router-view>
           <template #default="{ Component }">
-            <keep-alive :include="visitedViews">
+            <keep-alive>
               <component :is="Component" />
             </keep-alive>
           </template>
