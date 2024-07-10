@@ -4,3 +4,4 @@ export { default as NavRight } from "./NavRight.vue";
 export { default as Logo } from "./Logo.vue";
 export { default as Header } from "./Header.vue";
 export { default as TabView } from "./TabView.vue";
+export { default as SidebarMenuItem } from "./SidebarMenuItem.vue";

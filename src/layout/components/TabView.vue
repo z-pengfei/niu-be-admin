@@ -10,7 +10,7 @@
           @contextmenu.prevent="openTagMenu(item, $event)"
         >
           {{ item.title }}
-          <el-icon :size="10"><Close /></el-icon>
+          <el-icon :size="10" @click.prevent.stop="closeSelectedTag(item)"><Close /></el-icon>
         </router-link>
       </div>
     </el-scrollbar>
@@ -78,6 +78,18 @@ const selectedTag = ref<TagView>({
   meta: {}
 });
 
+const route = useRoute();
+watch(
+  route,
+  () => {
+    addTags();
+    moveToCurrentTag();
+  },
+  {
+    immediate: true //初始化立即执行
+  }
+);
+
 onMounted(() => {
   watch(tagMenuVisible, value => {
     if (value) {
@@ -87,6 +99,43 @@ onMounted(() => {
     }
   });
 });
+
+function addTags() {
+  if (route.meta.title) {
+    tagsViewStore.addView({
+      name: route.name as string,
+      title: route.meta.title as string,
+      path: route.path,
+      fullPath: route.fullPath,
+      affix: !!route.meta?.affix,
+      keepAlive: !!route.meta?.keepAlive,
+      query: route.query
+    });
+  }
+}
+
+function moveToCurrentTag() {
+  // 使用 nextTick() 的目的是确保在更新 tagsView 组件之前，scrollPaneRef 对象已经滚动到了正确的位置。
+  nextTick(() => {
+    for (const tag of visitedViews.value) {
+      if (tag.path === route.path) {
+        // when query is different then update
+        // route.query = { ...route.query, ...tag.query };
+        if (tag.fullPath !== route.fullPath) {
+          tagsViewStore.updateVisitedView({
+            name: route.name as string,
+            title: route.meta.title as string,
+            path: route.path,
+            fullPath: route.fullPath,
+            affix: !!route.meta?.affix,
+            keepAlive: !!route.meta?.keepAlive,
+            query: route.query
+          });
+        }
+      }
+    }
+  });
+}
 
 function openTagMenu(tag: TagView, e: MouseEvent) {
   selectedTag.value = tag;
@@ -106,8 +155,6 @@ function closeTagMenu() {
   tagMenuVisible.value = false;
 }
 
-const route = useRoute();
-
 function isActive(tag: TagView) {
   return route.name === tag.name;
 }
@@ -116,7 +163,13 @@ function refreshSelectedTag(tag: TagView) {}
 function isAffix(tag: TagView) {
   return false;
 }
-function closeSelectedTag(tag: TagView) {}
+function closeSelectedTag(view: TagView) {
+  tagsViewStore.delView(view).then((res: any) => {
+    if (tagsViewStore.isActive(view)) {
+      tagsViewStore.toLastView(res.visitedViews, view);
+    }
+  });
+}
 function closeOtherTags() {}
 function isFirstView() {
   return false;

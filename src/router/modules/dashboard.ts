@@ -9,16 +9,19 @@ export default [
     name: "/layout",
     path: "/layout",
     component: Layout,
+    meta: { icon: "user", title: "测试页" },
     children: [
       {
         path: "/",
         name: "home",
-        component: HomeView
+        component: HomeView,
+        meta: { icon: "moon", title: "测试页1" }
       },
       {
         path: "/about",
         name: "about",
-        component: AboutView
+        component: AboutView,
+        meta: { icon: "sub", title: "测试页2" }
       }
     ]
   }

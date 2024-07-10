@@ -9,7 +9,7 @@
         <TabView />
         <router-view>
           <template #default="{ Component }">
-            <keep-alive>
+            <keep-alive :include="cachedViews">
               <component :is="Component" />
             </keep-alive>
           </template>
@@ -26,7 +26,7 @@ const globalStore = useGlobalStore();
 import { useTagsViewStore } from "@/store/modules/tagsView";
 import { storeToRefs } from "pinia";
 const tagsViewStore = useTagsViewStore();
-const { visitedViews } = storeToRefs(tagsViewStore);
+const { cachedViews } = storeToRefs(tagsViewStore);
 </script>
 
 <style lang="scss" scoped>
