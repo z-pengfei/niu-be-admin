@@ -3,9 +3,10 @@
   <template v-for="item in menuList" :key="item.path">
     <!-- 非叶子节点 v-show：true(显示)false(隐藏)，v-if反之。 -->
     <el-sub-menu v-if="item.children?.length && !item.meta.hidden" :index="item.path">
-      <SvgIcon :icon-class="item.meta.icon"></SvgIcon>
       <template #title>
-        {{ item.meta.title }}
+        <SvgIcon :icon-class="item.meta.icon" size="18"></SvgIcon>
+        <!-- <el-icon><location /></el-icon> -->
+        <span style="margin-left: 10px"> {{ item.meta.title }}</span>
       </template>
       <SidebarMenuItem :menuList="item.children" />
     </el-sub-menu>

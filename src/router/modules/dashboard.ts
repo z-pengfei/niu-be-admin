@@ -9,7 +9,7 @@ export default [
     name: "/layout",
     path: "/layout",
     component: Layout,
-    meta: { icon: "user", title: "测试页" },
+    meta: { icon: "users", title: "测试页" },
     children: [
       {
         path: "/",

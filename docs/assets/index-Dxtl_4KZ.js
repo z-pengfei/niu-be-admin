@@ -5,22 +5,22 @@ import {
   a as te,
   h as ne,
   u as B,
-  M as re,
+  N as re,
   _ as le,
   o as J,
-  a4 as I,
+  R as I,
   r as _,
-  a5 as H,
-  B as j,
-  a6 as ae,
-  a7 as se,
-  N as P,
+  a7 as H,
+  D as j,
+  a8 as ae,
+  a9 as se,
+  O as P,
   j as ue,
-  a8 as ie,
-  a9 as oe,
-  aa as ce,
-  ab as fe
-} from "./index-DQaA9kh1.js";
+  aa as ie,
+  ab as oe,
+  ac as ce,
+  ad as fe
+} from "./index-Ba89OMSi.js";
 const de = ["xlink:href", "fill"],
   ve = Z({
     __name: "index",
@@ -271,7 +271,7 @@ function Oe(e, r, t, u = {}) {
   const y = A(r),
     l = Me(y),
     k = (n = u.serializer) != null ? n : Ae[l],
-    { pause: x, resume: m } = be(h, () => D(h.value), { flush: a, deep: c, eventFilter: S });
+    { pause: D, resume: m } = be(h, () => x(h.value), { flush: a, deep: c, eventFilter: S });
   d &&
     i &&
     Q(() => {
@@ -284,7 +284,7 @@ function Oe(e, r, t, u = {}) {
         new CustomEvent(W, { detail: { key: e, oldValue: s, newValue: g, storageArea: t } })
       );
   }
-  function D(s) {
+  function x(s) {
     try {
       const g = t.getItem(e);
       if (s == null) E(g, null), t.removeItem(e);
@@ -315,7 +315,7 @@ function Oe(e, r, t, u = {}) {
         return;
       }
       if (!(s && s.key !== e)) {
-        x();
+        D();
         try {
           (s == null ? void 0 : s.newValue) !== k.write(h.value) && (h.value = M(s));
         } catch (g) {
@@ -334,7 +334,7 @@ function Oe(e, r, t, u = {}) {
 function Y(e) {
   return Ee("(prefers-color-scheme: dark)", e);
 }
-function xe(e = {}) {
+function De(e = {}) {
   const {
       selector: r = "html",
       attribute: t = "class",
@@ -352,7 +352,7 @@ function xe(e = {}) {
     p = b(() => (S.value ? "dark" : "light")),
     w = o || (c == null ? ye(u) : Oe(c, u, a, { window: n, listenToStorageChanges: i })),
     h = b(() => (w.value === "auto" ? p.value : w.value)),
-    y = X("updateHTMLAttrs", (m, E, D) => {
+    y = X("updateHTMLAttrs", (m, E, x) => {
       const M = typeof m == "string" ? (n == null ? void 0 : n.document.querySelector(m)) : R(m);
       if (!M) return;
       let F;
@@ -367,14 +367,14 @@ function xe(e = {}) {
           n.document.head.appendChild(F)),
         E === "class")
       ) {
-        const z = D.split(/\s/g);
+        const z = x.split(/\s/g);
         Object.values(d)
           .flatMap(s => (s || "").split(/\s/g))
           .filter(Boolean)
           .forEach(s => {
             z.includes(s) ? M.classList.add(s) : M.classList.remove(s);
           });
-      } else M.setAttribute(E, D);
+      } else M.setAttribute(E, x);
       v && (n.getComputedStyle(F).opacity, document.head.removeChild(F));
     });
   function l(m) {
@@ -385,7 +385,7 @@ function xe(e = {}) {
     e.onChanged ? e.onChanged(m, l) : l(m);
   }
   j(h, k, { flush: "post", immediate: !0 }), Q(() => k(h.value));
-  const x = b({
+  const D = b({
     get() {
       return f ? w.value : h.value;
     },
@@ -394,14 +394,14 @@ function xe(e = {}) {
     }
   });
   try {
-    return Object.assign(x, { store: w, system: p, state: h });
+    return Object.assign(D, { store: w, system: p, state: h });
   } catch {
-    return x;
+    return D;
   }
 }
 function Ne(e = {}) {
   const { valueDark: r = "dark", valueLight: t = "", window: u = O } = e,
-    n = xe({
+    n = De({
       ...e,
       onChanged: (i, o) => {
         var f;
