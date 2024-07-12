@@ -2,9 +2,10 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 
 import login from "./modules/login";
 import dashboard from "./modules/dashboard";
+import tablePage from "./modules/tablePage";
 
 // 静态路由
-export const constantRoutes: RouteRecordRaw[] = [...login, ...dashboard];
+export const constantRoutes: RouteRecordRaw[] = [...login, ...dashboard, ...tablePage];
 
 /**
  * 创建路由

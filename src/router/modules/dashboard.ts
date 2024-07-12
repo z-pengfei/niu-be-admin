@@ -6,8 +6,8 @@ const Layout = () => import("@/layout/index.vue");
 
 export default [
   {
-    name: "/layout",
-    path: "/layout",
+    name: "/",
+    path: "/",
     component: Layout,
     meta: { icon: "users", title: "测试页" },
     children: [

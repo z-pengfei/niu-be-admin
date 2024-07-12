@@ -48,9 +48,11 @@
     "@vueuse/core": "^10.10.0",
     "element-plus": "^2.7.4",
     "jsencrypt": "^3.3.2",
+    "jspreadsheet-ce": "^4.2.1",
     "pinia": "^2.1.7",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "vxe-table": "^4.7.48"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
