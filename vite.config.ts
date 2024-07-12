@@ -12,6 +12,8 @@ import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 
 import autoprefixer from "autoprefixer";
 
+import Unocss from "unocss/vite";
+
 import { resolve } from "path";
 const pathSrc = fileURLToPath(new URL("./src", import.meta.url));
 // https://vitejs.dev/config/
@@ -19,6 +21,7 @@ export default defineConfig({
   base: "/niu-be-admin/",
   plugins: [
     vue(),
+    Unocss(),
     vueJsx(),
     AutoImport({
       imports: ["vue", "@vueuse/core"],
