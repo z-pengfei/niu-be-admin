@@ -6,7 +6,7 @@
       </router-link>
 
       <router-link v-else key="expand" to="/">
-        <span class="name">SAAS - DEMO </span>
+        <span class="font-bold text-xl">niu-be-admin</span>
       </router-link>
     </transition>
   </div>
@@ -29,11 +29,6 @@ const globalStore = useGlobalStore();
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .name {
-    font-weight: bold;
-    font-size: 18px;
   }
 }
 

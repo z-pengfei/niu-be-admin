@@ -20,6 +20,9 @@
 </template>
 
 <script setup lang="ts">
+import Header from "@/layout/components/Header/index.vue";
+import Logo from "@/layout/components/Logo/index.vue";
+
 import { useGlobalStore } from "@/store/modules/global";
 const globalStore = useGlobalStore();
 
@@ -33,6 +36,12 @@ const { cachedViews } = storeToRefs(tagsViewStore);
 .common-layout {
   width: 100%;
   height: 100%;
+}
+.el-header {
+  height: auto;
+}
+.el-main {
+  padding-top: 0;
 }
 .el-aside {
   border-right: 1px solid var(--el-menu-border-color);

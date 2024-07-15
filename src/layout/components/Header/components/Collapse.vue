@@ -1,7 +1,7 @@
 <template>
   <div @click="globalStore.toggleClick">
     <SvgIcon
-      class="hamburger"
+      class="collpase-icon"
       :class="{ 'is-active': globalStore.sidebar.isActive }"
       icon-class="shrink"
       size="20"
@@ -15,13 +15,13 @@ const globalStore = useGlobalStore();
 </script>
 
 <style lang="scss" scoped>
-.hamburger {
+.collpase-icon {
   vertical-align: middle;
   cursor: pointer;
   transform: scaleX(-1);
 }
 
-.hamburger.is-active {
+.collpase-icon.is-active {
   transform: scaleX(1);
 }
 </style>

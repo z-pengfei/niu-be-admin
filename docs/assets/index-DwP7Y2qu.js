@@ -2,27 +2,26 @@ import {
   d as Z,
   c as b,
   g as ee,
-  a as te,
+  b as te,
   h as ne,
   u as B,
-  N as re,
+  L as re,
   _ as le,
   o as J,
-  R as I,
-  r as _,
-  a7 as H,
+  F as H,
+  r as A,
+  a7 as I,
   D as j,
   a8 as ae,
   a9 as se,
-  O as P,
-  j as ue,
+  M as P,
   aa as ie,
-  ab as oe,
-  ac as ce,
-  ad as fe
-} from "./index-Ba89OMSi.js";
-const de = ["xlink:href", "fill"],
-  ve = Z({
+  ab as ue,
+  ac as oe,
+  ad as ce
+} from "./index-9lMfA8vk.js";
+const fe = ["xlink:href", "fill"],
+  de = Z({
     __name: "index",
     props: {
       prefix: { type: String, default: "icon" },
@@ -33,7 +32,7 @@ const de = ["xlink:href", "fill"],
     setup(e) {
       const r = e,
         t = b(() => `#${r.prefix}-${r.iconClass}`);
-      return (u, n) => (
+      return (s, n) => (
         ee(),
         te(
           "svg",
@@ -42,119 +41,106 @@ const de = ["xlink:href", "fill"],
             class: "svg-icon",
             style: re("width:" + e.size + ";height:" + e.size)
           },
-          [ne("use", { "xlink:href": B(t), fill: e.color }, null, 8, de)],
+          [ne("use", { "xlink:href": B(t), fill: e.color }, null, 8, fe)],
           4
         )
       );
     }
   }),
-  ze = le(ve, [["__scopeId", "data-v-3289d8d1"]]);
-function V(e) {
+  xe = le(de, [["__scopeId", "data-v-3289d8d1"]]);
+function W(e) {
   return ae() ? (se(e), !0) : !1;
 }
-function A(e) {
+function R(e) {
   return typeof e == "function" ? e() : B(e);
 }
 const $ = typeof window < "u" && typeof document < "u";
 typeof WorkerGlobalScope < "u" && globalThis instanceof WorkerGlobalScope;
-const pe = Object.prototype.toString,
-  me = e => pe.call(e) === "[object Object]",
+const ve = Object.prototype.toString,
+  pe = e => ve.call(e) === "[object Object]",
   G = () => {};
-function ge(e, r) {
-  function t(...u) {
-    return new Promise((n, a) => {
-      Promise.resolve(e(() => r.apply(this, u), { fn: r, thisArg: this, args: u }))
+function me(e, r) {
+  function t(...s) {
+    return new Promise((n, i) => {
+      Promise.resolve(e(() => r.apply(this, s), { fn: r, thisArg: this, args: s }))
         .then(n)
-        .catch(a);
+        .catch(i);
     });
   }
   return t;
 }
 const K = e => e();
 function he(e = K) {
-  const r = _(!0);
+  const r = A(!0);
   function t() {
     r.value = !1;
   }
-  function u() {
+  function s() {
     r.value = !0;
   }
-  const n = (...a) => {
-    r.value && e(...a);
+  const n = (...i) => {
+    r.value && e(...i);
   };
-  return { isActive: H(r), pause: t, resume: u, eventFilter: n };
+  return { isActive: I(r), pause: t, resume: s, eventFilter: n };
 }
-function we(e) {
+function ge(e) {
   return P();
 }
-function ye(...e) {
+function we(...e) {
   if (e.length !== 1) return ie(...e);
   const r = e[0];
-  return typeof r == "function" ? H(oe(() => ({ get: r, set: G }))) : _(r);
+  return typeof r == "function" ? I(ue(() => ({ get: r, set: G }))) : A(r);
+}
+function ye(e, r, t = {}) {
+  const { eventFilter: s = K, ...n } = t;
+  return j(e, me(s, r), n);
 }
 function Se(e, r, t = {}) {
-  const { eventFilter: u = K, ...n } = t;
-  return j(e, ge(u, r), n);
-}
-function be(e, r, t = {}) {
-  const { eventFilter: u, ...n } = t,
-    { eventFilter: a, pause: c, resume: i, isActive: o } = he(u);
-  return { stop: Se(e, r, { ...n, eventFilter: a }), pause: c, resume: i, isActive: o };
+  const { eventFilter: s, ...n } = t,
+    { eventFilter: i, pause: c, resume: u, isActive: o } = he(s);
+  return { stop: ye(e, r, { ...n, eventFilter: i }), pause: c, resume: u, isActive: o };
 }
 function Q(e, r = !0, t) {
-  we() ? J(e, t) : r ? e() : I(e);
+  ge() ? J(e, t) : r ? e() : H(e);
 }
-function Le(e = !1, r = {}) {
-  const { truthyValue: t = !0, falsyValue: u = !1 } = r,
-    n = ue(e),
-    a = _(e);
-  function c(i) {
-    if (arguments.length) return (a.value = i), a.value;
-    {
-      const o = A(t);
-      return (a.value = a.value === o ? A(u) : o), a.value;
-    }
-  }
-  return n ? c : [a, c];
-}
-function R(e) {
+function N(e) {
   var r;
-  const t = A(e);
+  const t = R(e);
   return (r = t == null ? void 0 : t.$el) != null ? r : t;
 }
-const O = $ ? window : void 0,
-  Fe = $ ? window.document : void 0;
+const M = $ ? window : void 0,
+  be = $ ? window.document : void 0;
 function T(...e) {
-  let r, t, u, n;
+  let r, t, s, n;
   if (
     (typeof e[0] == "string" || Array.isArray(e[0])
-      ? (([t, u, n] = e), (r = O))
-      : ([r, t, u, n] = e),
+      ? (([t, s, n] = e), (r = M))
+      : ([r, t, s, n] = e),
     !r)
   )
     return G;
-  Array.isArray(t) || (t = [t]), Array.isArray(u) || (u = [u]);
-  const a = [],
+  Array.isArray(t) || (t = [t]), Array.isArray(s) || (s = [s]);
+  const i = [],
     c = () => {
-      a.forEach(v => v()), (a.length = 0);
+      i.forEach(v => v()), (i.length = 0);
     },
-    i = (v, d, S, p) => (v.addEventListener(d, S, p), () => v.removeEventListener(d, S, p)),
+    u = (v, d, S, p) => (v.addEventListener(d, S, p), () => v.removeEventListener(d, S, p)),
     o = j(
-      () => [R(r), A(n)],
+      () => [N(r), R(n)],
       ([v, d]) => {
         if ((c(), !v)) return;
-        const S = me(d) ? { ...d } : d;
-        a.push(...t.flatMap(p => u.map(w => i(v, p, w, S))));
+        const S = pe(d) ? { ...d } : d;
+        i.push(...t.flatMap(p => s.map(w => u(v, p, w, S))));
       },
       { immediate: !0, flush: "post" }
     ),
     f = () => {
       o(), c();
     };
-  return V(f), f;
+  return W(f), f;
 }
-function ke() {
-  const e = _(!1),
+function Fe() {
+  const e = A(!1),
     r = P();
   return (
     r &&
@@ -165,32 +151,32 @@ function ke() {
   );
 }
 function U(e) {
-  const r = ke();
+  const r = Fe();
   return b(() => (r.value, !!e()));
 }
-function Ee(e, r = {}) {
-  const { window: t = O } = r,
-    u = U(() => t && "matchMedia" in t && typeof t.matchMedia == "function");
+function ke(e, r = {}) {
+  const { window: t = M } = r,
+    s = U(() => t && "matchMedia" in t && typeof t.matchMedia == "function");
   let n;
-  const a = _(!1),
+  const i = A(!1),
     c = f => {
-      a.value = f.matches;
+      i.value = f.matches;
     },
-    i = () => {
+    u = () => {
       n && ("removeEventListener" in n ? n.removeEventListener("change", c) : n.removeListener(c));
     },
-    o = fe(() => {
-      u.value &&
-        (i(),
-        (n = t.matchMedia(A(e))),
+    o = ce(() => {
+      s.value &&
+        (u(),
+        (n = t.matchMedia(R(e))),
         "addEventListener" in n ? n.addEventListener("change", c) : n.addListener(c),
-        (a.value = n.matches));
+        (i.value = n.matches));
     });
   return (
-    V(() => {
-      o(), i(), (n = void 0);
+    W(() => {
+      o(), u(), (n = void 0);
     }),
-    a
+    i
   );
 }
 const L =
@@ -203,15 +189,15 @@ const L =
           : typeof self < "u"
             ? self
             : {},
-  N = "__vueuse_ssr_handlers__",
-  Ce = _e();
-function _e() {
-  return N in L || (L[N] = L[N] || {}), L[N];
+  z = "__vueuse_ssr_handlers__",
+  Ee = Ce();
+function Ce() {
+  return z in L || (L[z] = L[z] || {}), L[z];
 }
 function X(e, r) {
-  return Ce[e] || r;
+  return Ee[e] || r;
 }
-function Me(e) {
+function _e(e) {
   return e == null
     ? "any"
     : e instanceof Set
@@ -230,7 +216,7 @@ function Me(e) {
                   ? "any"
                   : "number";
 }
-const Ae = {
+const Me = {
     boolean: { read: e => e === "true", write: e => String(e) },
     object: { read: e => JSON.parse(e), write: e => JSON.stringify(e) },
     number: { read: e => Number.parseFloat(e), write: e => String(e) },
@@ -240,109 +226,109 @@ const Ae = {
     set: { read: e => new Set(JSON.parse(e)), write: e => JSON.stringify(Array.from(e)) },
     date: { read: e => new Date(e), write: e => e.toISOString() }
   },
-  W = "vueuse-storage";
-function Oe(e, r, t, u = {}) {
+  q = "vueuse-storage";
+function Ae(e, r, t, s = {}) {
   var n;
   const {
-      flush: a = "pre",
+      flush: i = "pre",
       deep: c = !0,
-      listenToStorageChanges: i = !0,
+      listenToStorageChanges: u = !0,
       writeDefaults: o = !0,
       mergeDefaults: f = !1,
       shallow: v,
-      window: d = O,
+      window: d = M,
       eventFilter: S,
-      onError: p = s => {
-        console.error(s);
+      onError: p = a => {
+        console.error(a);
       },
       initOnMounted: w
-    } = u,
-    h = (v ? ce : _)(typeof r == "function" ? r() : r);
+    } = s,
+    g = (v ? oe : A)(typeof r == "function" ? r() : r);
   if (!t)
     try {
       t = X("getDefaultStorage", () => {
-        var s;
-        return (s = O) == null ? void 0 : s.localStorage;
+        var a;
+        return (a = M) == null ? void 0 : a.localStorage;
       })();
-    } catch (s) {
-      p(s);
+    } catch (a) {
+      p(a);
     }
-  if (!t) return h;
-  const y = A(r),
-    l = Me(y),
-    k = (n = u.serializer) != null ? n : Ae[l],
-    { pause: D, resume: m } = be(h, () => x(h.value), { flush: a, deep: c, eventFilter: S });
+  if (!t) return g;
+  const y = R(r),
+    l = _e(y),
+    k = (n = s.serializer) != null ? n : Me[l],
+    { pause: D, resume: m } = Se(g, () => O(g.value), { flush: i, deep: c, eventFilter: S });
   d &&
-    i &&
+    u &&
     Q(() => {
-      T(d, "storage", F), T(d, W, z), w && F();
+      T(d, "storage", F), T(d, q, x), w && F();
     }),
     w || F();
-  function E(s, g) {
+  function E(a, h) {
     d &&
       d.dispatchEvent(
-        new CustomEvent(W, { detail: { key: e, oldValue: s, newValue: g, storageArea: t } })
+        new CustomEvent(q, { detail: { key: e, oldValue: a, newValue: h, storageArea: t } })
       );
   }
-  function x(s) {
+  function O(a) {
     try {
-      const g = t.getItem(e);
-      if (s == null) E(g, null), t.removeItem(e);
+      const h = t.getItem(e);
+      if (a == null) E(h, null), t.removeItem(e);
       else {
-        const C = k.write(s);
-        g !== C && (t.setItem(e, C), E(g, C));
+        const C = k.write(a);
+        h !== C && (t.setItem(e, C), E(h, C));
       }
-    } catch (g) {
-      p(g);
+    } catch (h) {
+      p(h);
     }
   }
-  function M(s) {
-    const g = s ? s.newValue : t.getItem(e);
-    if (g == null) return o && y != null && t.setItem(e, k.write(y)), y;
-    if (!s && f) {
-      const C = k.read(g);
+  function _(a) {
+    const h = a ? a.newValue : t.getItem(e);
+    if (h == null) return o && y != null && t.setItem(e, k.write(y)), y;
+    if (!a && f) {
+      const C = k.read(h);
       return typeof f == "function"
         ? f(C, y)
         : l === "object" && !Array.isArray(C)
           ? { ...y, ...C }
           : C;
-    } else return typeof g != "string" ? g : k.read(g);
+    } else return typeof h != "string" ? h : k.read(h);
   }
-  function F(s) {
-    if (!(s && s.storageArea !== t)) {
-      if (s && s.key == null) {
-        h.value = y;
+  function F(a) {
+    if (!(a && a.storageArea !== t)) {
+      if (a && a.key == null) {
+        g.value = y;
         return;
       }
-      if (!(s && s.key !== e)) {
+      if (!(a && a.key !== e)) {
         D();
         try {
-          (s == null ? void 0 : s.newValue) !== k.write(h.value) && (h.value = M(s));
-        } catch (g) {
-          p(g);
+          (a == null ? void 0 : a.newValue) !== k.write(g.value) && (g.value = _(a));
+        } catch (h) {
+          p(h);
         } finally {
-          s ? I(m) : m();
+          a ? H(m) : m();
         }
       }
     }
   }
-  function z(s) {
-    F(s.detail);
+  function x(a) {
+    F(a.detail);
   }
-  return h;
+  return g;
 }
 function Y(e) {
-  return Ee("(prefers-color-scheme: dark)", e);
+  return ke("(prefers-color-scheme: dark)", e);
 }
 function De(e = {}) {
   const {
       selector: r = "html",
       attribute: t = "class",
-      initialValue: u = "auto",
-      window: n = O,
-      storage: a,
+      initialValue: s = "auto",
+      window: n = M,
+      storage: i,
       storageKey: c = "vueuse-color-scheme",
-      listenToStorageChanges: i = !0,
+      listenToStorageChanges: u = !0,
       storageRef: o,
       emitAuto: f,
       disableTransition: v = !0
@@ -350,11 +336,11 @@ function De(e = {}) {
     d = { auto: "", light: "light", dark: "dark", ...(e.modes || {}) },
     S = Y({ window: n }),
     p = b(() => (S.value ? "dark" : "light")),
-    w = o || (c == null ? ye(u) : Oe(c, u, a, { window: n, listenToStorageChanges: i })),
-    h = b(() => (w.value === "auto" ? p.value : w.value)),
-    y = X("updateHTMLAttrs", (m, E, x) => {
-      const M = typeof m == "string" ? (n == null ? void 0 : n.document.querySelector(m)) : R(m);
-      if (!M) return;
+    w = o || (c == null ? we(s) : Ae(c, s, i, { window: n, listenToStorageChanges: u })),
+    g = b(() => (w.value === "auto" ? p.value : w.value)),
+    y = X("updateHTMLAttrs", (m, E, O) => {
+      const _ = typeof m == "string" ? (n == null ? void 0 : n.document.querySelector(m)) : N(m);
+      if (!_) return;
       let F;
       if (
         (v &&
@@ -367,14 +353,14 @@ function De(e = {}) {
           n.document.head.appendChild(F)),
         E === "class")
       ) {
-        const z = x.split(/\s/g);
+        const x = O.split(/\s/g);
         Object.values(d)
-          .flatMap(s => (s || "").split(/\s/g))
+          .flatMap(a => (a || "").split(/\s/g))
           .filter(Boolean)
-          .forEach(s => {
-            z.includes(s) ? M.classList.add(s) : M.classList.remove(s);
+          .forEach(a => {
+            x.includes(a) ? _.classList.add(a) : _.classList.remove(a);
           });
-      } else M.setAttribute(E, x);
+      } else _.setAttribute(E, O);
       v && (n.getComputedStyle(F).opacity, document.head.removeChild(F));
     });
   function l(m) {
@@ -384,56 +370,56 @@ function De(e = {}) {
   function k(m) {
     e.onChanged ? e.onChanged(m, l) : l(m);
   }
-  j(h, k, { flush: "post", immediate: !0 }), Q(() => k(h.value));
+  j(g, k, { flush: "post", immediate: !0 }), Q(() => k(g.value));
   const D = b({
     get() {
-      return f ? w.value : h.value;
+      return f ? w.value : g.value;
     },
     set(m) {
       w.value = m;
     }
   });
   try {
-    return Object.assign(D, { store: w, system: p, state: h });
+    return Object.assign(D, { store: w, system: p, state: g });
   } catch {
     return D;
   }
 }
-function Ne(e = {}) {
-  const { valueDark: r = "dark", valueLight: t = "", window: u = O } = e,
+function Le(e = {}) {
+  const { valueDark: r = "dark", valueLight: t = "", window: s = M } = e,
     n = De({
       ...e,
-      onChanged: (i, o) => {
+      onChanged: (u, o) => {
         var f;
-        e.onChanged ? (f = e.onChanged) == null || f.call(e, i === "dark", o, i) : o(i);
+        e.onChanged ? (f = e.onChanged) == null || f.call(e, u === "dark", o, u) : o(u);
       },
       modes: { dark: r, light: t }
     }),
-    a = b(() => (n.system ? n.system.value : Y({ window: u }).value ? "dark" : "light"));
+    i = b(() => (n.system ? n.system.value : Y({ window: s }).value ? "dark" : "light"));
   return b({
     get() {
       return n.value === "dark";
     },
-    set(i) {
-      const o = i ? "dark" : "light";
-      a.value === o ? (n.value = "auto") : (n.value = o);
+    set(u) {
+      const o = u ? "dark" : "light";
+      i.value === o ? (n.value = "auto") : (n.value = o);
     }
   });
 }
-const q = [
+const V = [
   "fullscreenchange",
   "webkitfullscreenchange",
   "webkitendfullscreen",
   "mozfullscreenchange",
   "MSFullscreenChange"
 ];
-function Re(e, r = {}) {
-  const { document: t = Fe, autoExit: u = !1 } = r,
+function ze(e, r = {}) {
+  const { document: t = be, autoExit: s = !1 } = r,
     n = b(() => {
       var l;
-      return (l = R(e)) != null ? l : t == null ? void 0 : t.querySelector("html");
+      return (l = N(e)) != null ? l : t == null ? void 0 : t.querySelector("html");
     }),
-    a = _(!1),
+    i = A(!1),
     c = b(() =>
       [
         "requestFullscreen",
@@ -445,7 +431,7 @@ function Re(e, r = {}) {
         "msRequestFullscreen"
       ].find(l => (t && l in t) || (n.value && l in n.value))
     ),
-    i = b(() =>
+    u = b(() =>
       [
         "exitFullscreen",
         "webkitExitFullscreen",
@@ -470,7 +456,7 @@ function Re(e, r = {}) {
       "mozFullScreenElement",
       "msFullscreenElement"
     ].find(l => t && l in t),
-    v = U(() => n.value && t && c.value !== void 0 && i.value !== void 0 && o.value !== void 0),
+    v = U(() => n.value && t && c.value !== void 0 && u.value !== void 0 && o.value !== void 0),
     d = () => (f ? (t == null ? void 0 : t[f]) === n.value : !1),
     S = () => {
       if (o.value) {
@@ -483,34 +469,34 @@ function Re(e, r = {}) {
       return !1;
     };
   async function p() {
-    if (!(!v.value || !a.value)) {
-      if (i.value)
-        if ((t == null ? void 0 : t[i.value]) != null) await t[i.value]();
+    if (!(!v.value || !i.value)) {
+      if (u.value)
+        if ((t == null ? void 0 : t[u.value]) != null) await t[u.value]();
         else {
           const l = n.value;
-          (l == null ? void 0 : l[i.value]) != null && (await l[i.value]());
+          (l == null ? void 0 : l[u.value]) != null && (await l[u.value]());
         }
-      a.value = !1;
+      i.value = !1;
     }
   }
   async function w() {
-    if (!v.value || a.value) return;
+    if (!v.value || i.value) return;
     S() && (await p());
     const l = n.value;
-    c.value && (l == null ? void 0 : l[c.value]) != null && (await l[c.value](), (a.value = !0));
+    c.value && (l == null ? void 0 : l[c.value]) != null && (await l[c.value](), (i.value = !0));
   }
-  async function h() {
-    await (a.value ? p() : w());
+  async function g() {
+    await (i.value ? p() : w());
   }
   const y = () => {
     const l = S();
-    (!l || (l && d())) && (a.value = l);
+    (!l || (l && d())) && (i.value = l);
   };
   return (
-    T(t, q, y, !1),
-    T(() => R(n), q, y, !1),
-    u && V(p),
-    { isSupported: v, isFullscreen: a, enter: w, exit: p, toggle: h }
+    T(t, V, y, !1),
+    T(() => N(n), V, y, !1),
+    s && W(p),
+    { isSupported: v, isFullscreen: i, enter: w, exit: p, toggle: g }
   );
 }
-export { ze as _, Ne as a, Re as b, Le as c, Oe as u };
+export { xe as _, ze as a, Le as b, Ae as u };

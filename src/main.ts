@@ -21,6 +21,8 @@ import VxeTable from "vxe-table";
 import "vxe-table/lib/style.css";
 // uncoss防止覆盖ElementPlus 的 el-button的css，所有放置最下方
 import "uno.css";
+// 引入styles
+import "@/styles/index.scss";
 
 // 创建app
 const app = createApp(App);

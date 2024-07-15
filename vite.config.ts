@@ -49,6 +49,13 @@ export default defineConfig({
     })
   ],
   css: {
+    // css全局变量使用，@/styles/variable.scss文件
+    preprocessorOptions: {
+      scss: {
+        javascriptEnabled: true,
+        additionalData: '@import "./src/styles/variable.scss";'
+      }
+    },
     postcss: {
       plugins: [
         autoprefixer({
