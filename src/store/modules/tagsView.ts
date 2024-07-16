@@ -210,7 +210,7 @@ export const useTagsViewStore = defineStore("tagsView", () => {
     if (latestView && latestView.fullPath) {
       router.push(latestView.fullPath);
     } else {
-      if (view?.name === "Dashboard") {
+      if (view?.name === "dashboard") {
         router.replace("/redirect" + view.fullPath);
       } else {
         router.push("/");

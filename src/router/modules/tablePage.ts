@@ -7,19 +7,19 @@ export default [
     name: "layout",
     path: "/layout",
     component: Layout,
-    meta: { icon: "users", title: "表格" },
+    meta: { icon: "Histogram", iconType: "el", title: "表格" },
     children: [
       {
         name: "vxeTable",
         path: "/vxe-table",
         component: () => import("@/views/table/vxe-table/index.vue"),
-        meta: { icon: "moon", title: "vxe-table" }
+        meta: { icon: "Notebook", iconType: "el", title: "vxe-table" }
       },
       {
         name: "jspreadsheet",
         path: "/jspreadsheet",
         component: () => import("@/views/table/jspreadsheet/index.vue"),
-        meta: { icon: "moon", title: "jspreadsheet" }
+        meta: { icon: "Document", iconType: "el", title: "jspreadsheet" }
       }
     ]
   }

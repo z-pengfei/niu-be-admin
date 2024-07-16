@@ -8,13 +8,13 @@ export default [
     name: "/",
     path: "/",
     component: Layout,
-    meta: { icon: "users", title: "首页" },
+    meta: { icon: "HomeFilled", iconType: "el", title: "首页" },
     children: [
       {
-        name: "Dashboard",
+        name: "dashboard",
         path: "/dashboard",
         component: HomeView,
-        meta: { icon: "moon", title: "首页" }
+        meta: { icon: "HomeFilled", iconType: "el", title: "首页" }
       }
     ]
   }

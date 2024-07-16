@@ -6,7 +6,7 @@
     <el-container>
       <el-header><Header /></el-header>
       <el-main>
-        <TabView />
+        <TagsView />
         <router-view>
           <template #default="{ Component }">
             <keep-alive :include="cachedViews">
@@ -23,6 +23,7 @@
 import Header from "@/layout/components/Header/index.vue";
 import Logo from "@/layout/components/Logo/index.vue";
 import SidebarMenu from "@/layout/components/SidebarMenu/index.vue";
+import TagsView from "@/layout/components/TagsView/index.vue";
 
 import { useGlobalStore } from "@/store/modules/global";
 const globalStore = useGlobalStore();
