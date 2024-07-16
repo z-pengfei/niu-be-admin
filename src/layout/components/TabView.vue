@@ -38,7 +38,7 @@
       <SvgIcon name="close_right" />
       关闭右侧
     </li>
-    <li @click="closeAllTags(selectedTag)">
+    <li @click="closeAllTags()">
       <SvgIcon name="close_all" />
       关闭所有
     </li>
@@ -121,22 +121,18 @@ function moveToCurrentTag() {
   // 使用 nextTick() 的目的是确保在更新 tagsView 组件之前，scrollPaneRef 对象已经滚动到了正确的位置。
   nextTick(() => {
     for (const tag of visitedViews.value) {
-      if (tag.path === route.path) {
-        // when query is different then update
-        // route.query = { ...route.query, ...tag.query };
-        if (tag.fullPath !== route.fullPath) {
-          tagsViewStore.updateVisitedView({
-            name: route.name as string,
-            path: route.path,
-            fullPath: route.fullPath,
-            query: route.query,
-            meta: {
-              title: route.meta.title as string,
-              affix: !!route.meta?.affix,
-              keepAlive: !!route.meta?.keepAlive
-            }
-          });
-        }
+      if (tag.path === route.path && tag.fullPath !== route.fullPath) {
+        tagsViewStore.updateVisitedView({
+          name: route.name as string,
+          path: route.path,
+          fullPath: route.fullPath,
+          query: route.query,
+          meta: {
+            title: route.meta.title as string,
+            affix: !!route.meta?.affix,
+            keepAlive: !!route.meta?.keepAlive
+          }
+        });
       }
     }
   });
@@ -175,16 +171,24 @@ function closeSelectedTag(view: TagView) {
     }
   });
 }
-function closeOtherTags() {}
+function closeOtherTags() {
+  tagsViewStore.delOtherViews(selectedTag.value);
+}
 function isFirstView() {
   return false;
 }
-function closeLeftTags() {}
+function closeLeftTags() {
+  tagsViewStore.delLeftViews(selectedTag.value);
+}
 function isLastView() {
   return false;
 }
-function closeRightTags() {}
-function closeAllTags(tag: TagView) {}
+function closeRightTags() {
+  tagsViewStore.delRightViews(selectedTag.value);
+}
+function closeAllTags() {
+  tagsViewStore.delAllViews();
+}
 </script>
 
 <style lang="scss" scoped>

@@ -1,6 +1,5 @@
 import { RouteRecordRaw } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
-import AboutView from "@/views/AboutView.vue";
 
 const Layout = () => import("@/layout/index.vue");
 
@@ -9,19 +8,13 @@ export default [
     name: "/",
     path: "/",
     component: Layout,
-    meta: { icon: "users", title: "测试页" },
+    meta: { icon: "users", title: "首页" },
     children: [
       {
-        path: "/",
-        name: "home",
+        name: "Dashboard",
+        path: "/dashboard",
         component: HomeView,
-        meta: { icon: "moon", title: "测试页1" }
-      },
-      {
-        path: "/about",
-        name: "about",
-        component: AboutView,
-        meta: { icon: "sub", title: "测试页2" }
+        meta: { icon: "moon", title: "首页" }
       }
     ]
   }

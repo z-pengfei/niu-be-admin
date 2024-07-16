@@ -17,7 +17,7 @@ export const useTagsViewStore = defineStore("tagsView", () => {
     if (visitedViews.value.some(v => v.path === view.path)) {
       return;
     }
-    if (view.affix) {
+    if (view.meta.affix) {
       visitedViews.value.unshift(view);
     } else {
       visitedViews.value.push(view);
@@ -32,7 +32,7 @@ export const useTagsViewStore = defineStore("tagsView", () => {
     if (cachedViews.value.includes(viewName)) {
       return;
     }
-    if (view.keepAlive) {
+    if (view.meta.keepAlive) {
       cachedViews.value.push(viewName);
     }
   };
@@ -70,7 +70,7 @@ export const useTagsViewStore = defineStore("tagsView", () => {
   const delOtherVisitedViews = (view: TagView) => {
     return new Promise(resolve => {
       visitedViews.value = visitedViews.value.filter(v => {
-        return v?.affix || v.path === view.path;
+        return v?.meta.affix || v.path === view.path;
       });
       resolve([...visitedViews.value]);
     });
@@ -150,7 +150,7 @@ export const useTagsViewStore = defineStore("tagsView", () => {
         return;
       }
       visitedViews.value = visitedViews.value.filter((item, index) => {
-        if (index >= currIndex || item?.affix) {
+        if (index >= currIndex || item?.meta.affix) {
           return true;
         }
 
@@ -176,7 +176,7 @@ export const useTagsViewStore = defineStore("tagsView", () => {
         return;
       }
       visitedViews.value = visitedViews.value.filter((item, index) => {
-        if (index <= currIndex || item?.affix) {
+        if (index <= currIndex || item?.meta.affix) {
           return true;
         }
       });
@@ -191,7 +191,7 @@ export const useTagsViewStore = defineStore("tagsView", () => {
    */
   const delAllViews = () => {
     return new Promise(resolve => {
-      const affixTags = visitedViews.value.filter(tag => tag?.affix);
+      const affixTags = visitedViews.value.filter(tag => tag?.meta.affix);
       visitedViews.value = affixTags;
       cachedViews.value = [];
       resolve({

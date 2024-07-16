@@ -8,7 +8,8 @@
   </el-menu>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
+import SidebarMenuItem from "./components/SidebarMenuItem.vue";
 import { constantRoutes } from "@/router";
 import { useGlobalStore } from "@/store/modules/global";
 import { RouteRecordRaw, useRoute } from "vue-router";
@@ -19,7 +20,7 @@ const currentRoute = useRoute();
 const menuList = ref<RouteRecordRaw[]>(constantRoutes);
 </script>
 
-<style>
+<style lang="scss" scoped>
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   max-width: 200px;
 }

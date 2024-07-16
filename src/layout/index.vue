@@ -1,7 +1,7 @@
 <template>
   <el-container class="common-layout">
     <el-aside :style="{ width: !globalStore.sidebar.isActive ? '65px' : '220px' }" class="sidebar">
-      <Logo /> <LeftMenu />
+      <Logo /> <SidebarMenu />
     </el-aside>
     <el-container>
       <el-header><Header /></el-header>
@@ -22,6 +22,7 @@
 <script setup lang="ts">
 import Header from "@/layout/components/Header/index.vue";
 import Logo from "@/layout/components/Logo/index.vue";
+import SidebarMenu from "@/layout/components/SidebarMenu/index.vue";
 
 import { useGlobalStore } from "@/store/modules/global";
 const globalStore = useGlobalStore();

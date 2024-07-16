@@ -26,7 +26,7 @@ defineProps({
    * 当前路由项对象
    */
   menuList: {
-    type: Array<TagView>,
+    type: Array<any>,
     required: true
   }
 });
