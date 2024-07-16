@@ -4,20 +4,20 @@ const Layout = () => import("@/layout/index.vue");
 
 export default [
   {
-    name: "layout",
-    path: "/layout",
+    name: "system",
+    path: "/system",
     component: Layout,
     meta: { icon: "Tools", iconType: "el", title: "系统管理" },
     children: [
       {
         name: "user",
-        path: "/user",
+        path: "/system/user",
         component: () => import("@/views/system/user/index.vue"),
         meta: { icon: "User", iconType: "el", title: "用户管理" }
       },
       {
         name: "role",
-        path: "/role",
+        path: "/system/role",
         component: () => import("@/views/system/role/index.vue"),
         meta: { icon: "BellFilled", iconType: "el", title: "角色管理" }
       }

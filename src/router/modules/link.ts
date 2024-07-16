@@ -5,14 +5,14 @@ const Layout = () => import("@/layout/index.vue");
 
 export default [
   {
-    name: "layout",
-    path: "/layout",
+    name: "link",
+    path: "/link",
     component: Layout,
     meta: { icon: "Link", iconType: "el", title: "外部链接" },
     children: [
       {
         name: "github",
-        path: "/github",
+        path: "/link/github",
         meta: {
           icon: "Bicycle",
           iconType: "el",
@@ -22,7 +22,7 @@ export default [
       },
       {
         name: "elementPlus",
-        path: "/elementPlus",
+        path: "/link/elementPlus",
         component: ElementPlus,
         meta: { icon: "ElementPlus", iconType: "el", title: "ElementPlus" }
       }

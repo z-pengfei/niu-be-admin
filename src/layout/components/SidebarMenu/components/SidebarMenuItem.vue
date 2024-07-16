@@ -15,7 +15,7 @@
       <template #title>
         <el-icon>
           <component v-if="item.meta.iconType == 'el'" :is="item.meta.icon"></component>
-          <SvgIcon :name="item.meta.icon"></SvgIcon>
+          <SvgIcon v-else :name="item.meta.icon"></SvgIcon>
         </el-icon>
         <span> {{ item.meta.title }}</span>
       </template>
