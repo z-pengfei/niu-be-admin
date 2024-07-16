@@ -26,8 +26,8 @@ import {
   x as Qt,
   y as Yt,
   _ as Wt
-} from "./index-9lMfA8vk.js";
-import { u as vt, _ as $t } from "./index-DwP7Y2qu.js";
+} from "./index-C1t76LZj.js";
+import { u as vt, _ as $t } from "./index-DVzjjm5K.js";
 var Xt = "0123456789abcdefghijklmnopqrstuvwxyz";
 function C(r) {
   return Xt.charAt(r);
@@ -2748,7 +2748,7 @@ const Ee =
   },
   Be = r => xe(r, De),
   Ae = r => Re(r, Ee),
-  Oe = r => (Jt("data-v-4381713b"), (r = r()), Qt(), r),
+  Oe = r => (Jt("data-v-493c039f"), (r = r()), Qt(), r),
   Ve = { class: "login" },
   Ie = Oe(() => _("div", { class: "login-title" }, [_("h2", null, "niu-be-admin")], -1)),
   Ne = { class: "p-2" },
@@ -2830,7 +2830,7 @@ const Ee =
                         { prop: "username" },
                         {
                           default: M(() => [
-                            _("span", null, [D(R, { "icon-class": "users" })]),
+                            _("span", null, [D(R, { name: "users" })]),
                             D(
                               B,
                               {
@@ -2858,7 +2858,7 @@ const Ee =
                               { prop: "password" },
                               {
                                 default: M(() => [
-                                  _("span", null, [D(R, { "icon-class": "password" })]),
+                                  _("span", null, [D(R, { name: "password" })]),
                                   D(
                                     B,
                                     {
@@ -2877,13 +2877,9 @@ const Ee =
                                     ["modelValue", "type"]
                                   ),
                                   _("span", { onClick: S[2] || (S[2] = E => (t.value = !A(t))) }, [
-                                    D(
-                                      R,
-                                      { "icon-class": A(t) === !1 ? "eye" : "eye-open" },
-                                      null,
-                                      8,
-                                      ["icon-class"]
-                                    )
+                                    D(R, { name: A(t) === !1 ? "eye" : "eye-open" }, null, 8, [
+                                      "name"
+                                    ])
                                   ])
                                 ]),
                                 _: 1
@@ -2898,7 +2894,7 @@ const Ee =
                         { prop: "captchaCode" },
                         {
                           default: M(() => [
-                            _("span", Ne, [D(R, { "icon-class": "captcha" })]),
+                            _("span", Ne, [D(R, { name: "captcha" })]),
                             D(
                               B,
                               {
@@ -2965,5 +2961,5 @@ const Ee =
       };
     }
   }),
-  Fe = Wt(Me, [["__scopeId", "data-v-4381713b"]]);
+  Fe = Wt(Me, [["__scopeId", "data-v-493c039f"]]);
 export { Fe as default };
