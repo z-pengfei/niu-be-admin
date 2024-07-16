@@ -9,7 +9,7 @@
           :class="['tags-item', { active: isActive(item) }]"
           @contextmenu.prevent="openTagMenu(item, $event)"
         >
-          {{ item.title }}
+          {{ item.meta.title }}
           <el-icon :size="10" @click.prevent.stop="closeSelectedTag(item)"><Close /></el-icon>
         </router-link>
       </div>
@@ -19,27 +19,27 @@
   <!-- tag标签操作菜单 -->
   <ul v-show="tagMenuVisible" class="tag-menu" :style="{ left: left + 'px', top: top + 'px' }">
     <li @click="refreshSelectedTag(selectedTag)">
-      <SvgIcon icon-class="refresh" />
+      <SvgIcon name="refresh" />
       刷新
     </li>
     <li v-if="!isAffix(selectedTag)" @click="closeSelectedTag(selectedTag)">
-      <SvgIcon icon-class="close" />
+      <SvgIcon name="close" />
       关闭
     </li>
     <li @click="closeOtherTags">
-      <SvgIcon icon-class="close_other" />
+      <SvgIcon name="close_other" />
       关闭其它
     </li>
     <li v-if="!isFirstView()" @click="closeLeftTags">
-      <SvgIcon icon-class="close_left" />
+      <SvgIcon name="close_left" />
       关闭左侧
     </li>
     <li v-if="!isLastView()" @click="closeRightTags">
-      <SvgIcon icon-class="close_right" />
+      <SvgIcon name="close_right" />
       关闭右侧
     </li>
     <li @click="closeAllTags(selectedTag)">
-      <SvgIcon icon-class="close_all" />
+      <SvgIcon name="close_all" />
       关闭所有
     </li>
   </ul>
@@ -71,11 +71,12 @@ const selectedTag = ref<TagView>({
   path: "",
   fullPath: "",
   name: "",
-  title: "",
-  affix: false,
-  keepAlive: true,
   query: {},
-  meta: {}
+  meta: {
+    title: "",
+    affix: false,
+    keepAlive: true
+  }
 });
 
 const route = useRoute();
@@ -104,12 +105,14 @@ function addTags() {
   if (route.meta.title) {
     tagsViewStore.addView({
       name: route.name as string,
-      title: route.meta.title as string,
       path: route.path,
       fullPath: route.fullPath,
-      affix: !!route.meta?.affix,
-      keepAlive: !!route.meta?.keepAlive,
-      query: route.query
+      query: route.query,
+      meta: {
+        title: route.meta.title as string,
+        affix: !!route.meta?.affix,
+        keepAlive: !!route.meta?.keepAlive
+      }
     });
   }
 }
@@ -124,12 +127,14 @@ function moveToCurrentTag() {
         if (tag.fullPath !== route.fullPath) {
           tagsViewStore.updateVisitedView({
             name: route.name as string,
-            title: route.meta.title as string,
             path: route.path,
             fullPath: route.fullPath,
-            affix: !!route.meta?.affix,
-            keepAlive: !!route.meta?.keepAlive,
-            query: route.query
+            query: route.query,
+            meta: {
+              title: route.meta.title as string,
+              affix: !!route.meta?.affix,
+              keepAlive: !!route.meta?.keepAlive
+            }
           });
         }
       }

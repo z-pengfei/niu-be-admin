@@ -30,7 +30,6 @@ const toggleDark = async (event: MouseEvent) => {
   if (document.startViewTransition === undefined) {
     /** 明亮和暗黑模式核心逻辑 */
     // 定义图标切换变量(true-月亮，false-太阳)
-
     isDark.value = !isDark.value;
     /** 明亮和暗黑模式核心逻辑 */
   } else {

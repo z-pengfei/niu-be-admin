@@ -7,7 +7,7 @@
       <el-form ref="loginFormRef" :model="loginData" :rules="loginRules" class="login-form">
         <el-form-item prop="username">
           <span>
-            <svg-icon icon-class="users" />
+            <svg-icon name="users" />
           </span>
           <el-input
             v-model="loginData.username"
@@ -20,7 +20,7 @@
         <el-tooltip content="查看密码" placement="right">
           <el-form-item prop="password">
             <span>
-              <svg-icon icon-class="password" />
+              <svg-icon name="password" />
             </span>
             <el-input
               v-model="loginData.password"
@@ -32,7 +32,7 @@
               @keyup.enter="handleLogin"
             />
             <span @click="passwordVisible = !passwordVisible">
-              <svg-icon :icon-class="passwordVisible === false ? 'eye' : 'eye-open'" />
+              <svg-icon :name="passwordVisible === false ? 'eye' : 'eye-open'" />
             </span>
           </el-form-item>
         </el-tooltip>
@@ -40,7 +40,7 @@
         <!-- 验证码 -->
         <el-form-item prop="captchaCode">
           <span class="p-2">
-            <svg-icon icon-class="captcha" />
+            <svg-icon name="captcha" />
           </span>
 
           <el-input

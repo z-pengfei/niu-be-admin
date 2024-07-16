@@ -3,7 +3,7 @@
     <SvgIcon
       class="collpase-icon"
       :class="{ 'is-active': globalStore.sidebar.isActive }"
-      icon-class="shrink"
+      name="shrink"
       size="20"
     />
   </div>
