@@ -1,58 +1,58 @@
 import {
-  z as te,
-  A as _e,
-  d as S,
-  g as i,
-  b as k,
-  e as n,
-  B as ne,
-  u as g,
+  d as te,
+  r as _e,
+  a as S,
+  o as l,
+  c as g,
+  b as n,
+  n as ne,
+  u as k,
   _ as L,
-  a as T,
-  C as V,
-  w as l,
-  D as E,
-  F as q,
-  p as se,
-  l as b,
-  G as pe,
-  H as fe,
-  I as me,
-  v as ae,
-  x as oe,
-  h as x,
-  J as ve,
+  e as T,
+  f as w,
+  w as i,
+  g as D,
+  E as z,
+  h as se,
+  i as b,
+  j as pe,
+  k as fe,
+  l as me,
+  p as ae,
+  m as oe,
+  q as V,
+  s as ve,
   T as he,
-  K as le,
-  L as ce,
-  M as z,
-  N as j,
-  O as Y,
-  P as we,
-  Q as ge,
-  R as G,
-  r as A,
-  S as xe,
-  U as ke,
-  c as Ve,
-  V as ie,
-  W as ee,
-  o as Ce,
-  X as ye,
-  k as X,
-  Y as be,
-  Z as Se,
-  $ as re,
-  a0 as Ie,
-  a1 as $e,
-  a2 as Ae,
-  a3 as Te,
-  a4 as Le,
-  a5 as Me,
-  a6 as Pe
-} from "./index-C1t76LZj.js";
-import { _ as D, a as Re, b as Ee } from "./index-DVzjjm5K.js";
-const B = te("global", () => {
+  t as le,
+  v as ie,
+  F as R,
+  x as X,
+  y as G,
+  z as we,
+  A as xe,
+  B as K,
+  C as A,
+  D as ge,
+  G as ke,
+  H as Ve,
+  I as ce,
+  J as ee,
+  K as ye,
+  L as Ce,
+  M as H,
+  N as be,
+  O as Se,
+  P as re,
+  Q as Ie,
+  R as $e,
+  S as Ae,
+  U as Te,
+  V as Le,
+  W as Me,
+  X as Pe
+} from "./index-DWH8vS13.js";
+import { _ as O, u as Ee, a as Re } from "./index-DgSXKmha.js";
+/* empty css                  */ /* empty css                     */ const B = te("global", () => {
     const t = _e({ isActive: !1 });
     return {
       sidebar: t,
@@ -66,17 +66,17 @@ const B = te("global", () => {
     setup(t) {
       const e = B();
       return (m, r) => {
-        const o = D;
+        const o = O;
         return (
-          i(),
-          k(
+          l(),
+          g(
             "div",
-            { onClick: r[0] || (r[0] = (...d) => g(e).toggleClick && g(e).toggleClick(...d)) },
+            { onClick: r[0] || (r[0] = (...d) => k(e).toggleClick && k(e).toggleClick(...d)) },
             [
               n(
                 o,
                 {
-                  class: ne(["collpase-icon", { "is-active": g(e).sidebar.isActive }]),
+                  class: ne(["collpase-icon", { "is-active": k(e).sidebar.isActive }]),
                   name: "shrink",
                   size: "20"
                 },
@@ -91,28 +91,28 @@ const B = te("global", () => {
     }
   }),
   Oe = L(De, [["__scopeId", "data-v-3a90420e"]]),
-  ze = S({
+  qe = S({
     __name: "FullScreen",
     setup(t) {
-      const { isFullscreen: e, toggle: m } = Re();
+      const { isFullscreen: e, toggle: m } = Ee();
       return (r, o) => {
-        const d = D;
+        const d = O;
         return (
-          i(),
-          k(
+          l(),
+          g(
             "div",
-            { class: "cursor-pointer", onClick: o[0] || (o[0] = (...h) => g(m) && g(m)(...h)) },
-            [n(d, { name: g(e) ? "exit-fullscreen" : "fullscreen" }, null, 8, ["name"])]
+            { class: "cursor-pointer", onClick: o[0] || (o[0] = (...h) => k(m) && k(m)(...h)) },
+            [n(d, { name: k(e) ? "exit-fullscreen" : "fullscreen" }, null, 8, ["name"])]
           )
         );
       };
     }
   }),
-  qe = { class: "mt-4px cursor-pointer" },
+  ze = { class: "mt-4px cursor-pointer" },
   Be = S({
     __name: "Dark",
     setup(t) {
-      const e = Ee(),
+      const e = Re(),
         m = async r => {
           const o = r.clientX,
             d = r.clientY,
@@ -122,9 +122,9 @@ const B = te("global", () => {
             await document.startViewTransition(() => {
               e.value = !e.value;
             }).ready;
-            const w = [`circle(0px at ${o}px ${d}px)`, `circle(${h}px at ${o}px ${d}px)`];
+            const x = [`circle(0px at ${o}px ${d}px)`, `circle(${h}px at ${o}px ${d}px)`];
             document.documentElement.animate(
-              { clipPath: e.value ? w : [...w].reverse() },
+              { clipPath: e.value ? x : [...x].reverse() },
               {
                 duration: 300,
                 easing: "ease-in",
@@ -137,38 +137,38 @@ const B = te("global", () => {
         };
       return (r, o) => {
         const d = T("Sunny"),
-          h = q,
+          h = z,
           C = se,
-          w = T("Moon");
+          x = T("Moon");
         return (
-          i(),
-          k("div", qe, [
-            g(e)
-              ? E("", !0)
-              : (i(),
-                V(
+          l(),
+          g("div", ze, [
+            k(e)
+              ? D("", !0)
+              : (l(),
+                w(
                   C,
                   { key: 0, content: "明亮模式" },
                   {
-                    default: l(() => [
-                      n(h, { size: 22, onClick: m }, { default: l(() => [n(d)]), _: 1 })
+                    default: i(() => [
+                      n(h, { size: 22, onClick: m }, { default: i(() => [n(d)]), _: 1 })
                     ]),
                     _: 1
                   }
                 )),
-            g(e)
-              ? (i(),
-                V(
+            k(e)
+              ? (l(),
+                w(
                   C,
                   { key: 1, content: "暗黑模式" },
                   {
-                    default: l(() => [
-                      n(h, { size: 22, onClick: m }, { default: l(() => [n(w)]), _: 1 })
+                    default: i(() => [
+                      n(h, { size: 22, onClick: m }, { default: i(() => [n(x)]), _: 1 })
                     ]),
                     _: 1
                   }
                 ))
-              : E("", !0)
+              : D("", !0)
           ])
         );
       };
@@ -177,46 +177,46 @@ const B = te("global", () => {
   Ne = {},
   Fe = t => (ae("data-v-2fb26022"), (t = t()), oe(), t),
   We = Fe(() =>
-    x(
+    V(
       "div",
       { class: "flex items-center cursor-pointer font-bold" },
-      [x("div", { class: "user-avatar" }, "A"), x("div", { class: "ml-6px" }, "Admin")],
+      [V("div", { class: "user-avatar" }, "A"), V("div", { class: "ml-6px" }, "Admin")],
       -1
     )
   );
-function He(t, e) {
+function je(t, e) {
   const m = pe,
     r = fe,
     o = me;
   return (
-    i(),
-    k("div", null, [
+    l(),
+    g("div", null, [
       n(
         o,
         { trigger: "click" },
         {
-          dropdown: l(() => [
+          dropdown: i(() => [
             n(r, null, {
-              default: l(() => [
-                n(m, null, { default: l(() => [b(" 修改密码 ")]), _: 1 }),
-                n(m, { divided: "" }, { default: l(() => [b(" 注销 ")]), _: 1 })
+              default: i(() => [
+                n(m, null, { default: i(() => [b(" 修改密码 ")]), _: 1 }),
+                n(m, { divided: "" }, { default: i(() => [b(" 注销 ")]), _: 1 })
               ]),
               _: 1
             })
           ]),
-          default: l(() => [We]),
+          default: i(() => [We]),
           _: 1
         }
       )
     ])
   );
 }
-const Xe = L(Ne, [
-    ["render", He],
+const He = L(Ne, [
+    ["render", je],
     ["__scopeId", "data-v-2fb26022"]
   ]),
-  je = { class: "mt-4px cursor-pointer" },
-  Ye = S({
+  Xe = { class: "mt-4px cursor-pointer" },
+  Ge = S({
     __name: "Refresh",
     setup(t) {
       const e = () => {
@@ -224,17 +224,17 @@ const Xe = L(Ne, [
       };
       return (m, r) => {
         const o = T("RefreshRight"),
-          d = q,
+          d = z,
           h = se;
         return (
-          i(),
-          k("div", je, [
+          l(),
+          g("div", Xe, [
             n(
               h,
               { content: "刷新" },
               {
-                default: l(() => [
-                  n(d, { size: 20, onClick: e }, { default: l(() => [n(o)]), _: 1 })
+                default: i(() => [
+                  n(d, { size: 20, onClick: e }, { default: i(() => [n(o)]), _: 1 })
                 ]),
                 _: 1
               }
@@ -244,43 +244,43 @@ const Xe = L(Ne, [
       };
     }
   }),
-  Ge = { class: "header" },
-  Ke = { class: "flex items-center justify-between truncate" },
-  Ue = { class: "header-right flex items-center justify-between" },
+  Ke = { class: "header" },
+  Ue = { class: "flex items-center justify-between truncate" },
+  Ye = { class: "header-right flex items-center justify-between" },
   Je = S({
     __name: "index",
     setup(t) {
       return (e, m) => (
-        i(), k("div", Ge, [x("div", Ke, [n(Oe)]), x("div", Ue, [n(Be), n(Ye), n(ze), n(Xe)])])
+        l(), g("div", Ke, [V("div", Ue, [n(Oe)]), V("div", Ye, [n(Be), n(Ge), n(qe), n(He)])])
       );
     }
   }),
   Qe = L(Je, [["__scopeId", "data-v-0fa5976d"]]),
   Ze = t => (ae("data-v-8996f933"), (t = t()), oe(), t),
   et = { class: "project-title" },
-  tt = Ze(() => x("span", { class: "font-bold text-xl" }, "niu-be-admin", -1)),
+  tt = Ze(() => V("span", { class: "font-bold text-xl" }, "niu-be-admin", -1)),
   nt = S({
     __name: "index",
     setup(t) {
       const e = B();
       return (m, r) => {
-        const o = D,
+        const o = O,
           d = T("router-link");
         return (
-          i(),
-          k("div", et, [
+          l(),
+          g("div", et, [
             n(
               he,
               { name: "sidebarLogoFade" },
               {
-                default: l(() => [
-                  g(e).sidebar.isActive
-                    ? (i(), V(d, { key: "expand", to: "/" }, { default: l(() => [tt]), _: 1 }))
-                    : (i(),
-                      V(
+                default: i(() => [
+                  k(e).sidebar.isActive
+                    ? (l(), w(d, { key: "expand", to: "/" }, { default: i(() => [tt]), _: 1 }))
+                    : (l(),
+                      w(
                         d,
                         { key: "collapse", to: "/" },
-                        { default: l(() => [n(o, { name: "logo", size: "20" })]), _: 1 }
+                        { default: i(() => [n(o, { name: "logo", size: "20" })]), _: 1 }
                       ))
                 ]),
                 _: 1
@@ -302,84 +302,96 @@ const Xe = L(Ne, [
           e.push(r.path);
         };
       return (r, o) => {
-        const d = D,
-          h = q,
+        const d = O,
+          h = z,
           C = T("SidebarMenuItem", !0),
-          w = we,
-          I = ge;
+          x = we,
+          I = xe;
         return (
-          i(!0),
-          k(
-            z,
+          l(!0),
+          g(
+            R,
             null,
-            ce(t.menuList, c => {
+            ie(t.menuList, c => {
               var _;
               return (
-                i(),
-                k(
-                  z,
+                l(),
+                g(
+                  R,
                   { key: c.path },
                   [
-                    (_ = c.children) != null && _.length && !c.meta.hidden
-                      ? (i(),
-                        V(
-                          w,
-                          { key: 0, index: c.path },
-                          {
-                            title: l(() => [
-                              n(
-                                h,
-                                null,
-                                {
-                                  default: l(() => [
-                                    c.meta.iconType == "el"
-                                      ? (i(), V(j(c.meta.icon), { key: 0 }))
-                                      : (i(),
-                                        V(d, { key: 1, name: c.meta.icon }, null, 8, ["name"]))
-                                  ]),
-                                  _: 2
-                                },
-                                1024
-                              ),
-                              x("span", null, Y(c.meta.title), 1)
-                            ]),
-                            default: l(() => [
-                              n(C, { menuList: c.children }, null, 8, ["menuList"])
-                            ]),
-                            _: 2
-                          },
-                          1032,
-                          ["index"]
-                        ))
-                      : c.meta.hidden
-                        ? E("", !0)
-                        : (i(),
-                          V(
-                            I,
-                            { key: 1, index: c.path, onClick: N => m(c) },
-                            {
-                              title: l(() => [
-                                n(
-                                  h,
-                                  null,
+                    c.meta.hidden
+                      ? D("", !0)
+                      : (l(),
+                        g(
+                          R,
+                          { key: 0 },
+                          [
+                            (_ = c.children) != null && _.length
+                              ? (l(),
+                                w(
+                                  x,
+                                  { key: 0, index: c.path },
                                   {
-                                    default: l(() => [
-                                      c.meta.iconType == "el"
-                                        ? (i(), V(j(c.meta.icon), { key: 0 }))
-                                        : E("", !0),
-                                      n(d, { name: c.meta.icon }, null, 8, ["name"])
+                                    title: i(() => [
+                                      n(
+                                        h,
+                                        null,
+                                        {
+                                          default: i(() => [
+                                            c.meta.iconType == "el"
+                                              ? (l(), w(X(c.meta.icon), { key: 0 }))
+                                              : (l(),
+                                                w(d, { key: 1, name: c.meta.icon }, null, 8, [
+                                                  "name"
+                                                ]))
+                                          ]),
+                                          _: 2
+                                        },
+                                        1024
+                                      ),
+                                      V("span", null, G(c.meta.title), 1)
+                                    ]),
+                                    default: i(() => [
+                                      n(C, { menuList: c.children }, null, 8, ["menuList"])
                                     ]),
                                     _: 2
                                   },
-                                  1024
-                                ),
-                                x("span", null, Y(c.meta.title), 1)
-                              ]),
-                              _: 2
-                            },
-                            1032,
-                            ["index", "onClick"]
-                          ))
+                                  1032,
+                                  ["index"]
+                                ))
+                              : (l(),
+                                w(
+                                  I,
+                                  { key: 1, index: c.path, onClick: N => m(c) },
+                                  {
+                                    default: i(() => [
+                                      n(
+                                        h,
+                                        null,
+                                        {
+                                          default: i(() => [
+                                            c.meta.iconType == "el"
+                                              ? (l(), w(X(c.meta.icon), { key: 0 }))
+                                              : (l(),
+                                                w(d, { key: 1, name: c.meta.icon }, null, 8, [
+                                                  "name"
+                                                ]))
+                                          ]),
+                                          _: 2
+                                        },
+                                        1024
+                                      ),
+                                      V("span", null, G(c.meta.title), 1)
+                                    ]),
+                                    _: 2
+                                  },
+                                  1032,
+                                  ["index", "onClick"]
+                                ))
+                          ],
+                          64
+                        ))
                   ],
                   64
                 )
@@ -395,20 +407,21 @@ const Xe = L(Ne, [
     __name: "index",
     setup(t) {
       const e = B(),
-        m = G(),
-        r = A(xe);
+        m = K(),
+        r = A(ge[0].children);
       return (o, d) => {
         const h = ke;
         return (
-          i(),
-          V(
+          l(),
+          w(
             h,
             {
-              "default-active": g(m).path,
+              "default-active": k(m).path,
               class: "el-menu-vertical-demo",
-              collapse: !g(e).sidebar.isActive
+              collapse: !k(e).sidebar.isActive,
+              "unique-opened": !0
             },
-            { default: l(() => [n(at, { menuList: g(r) }, null, 8, ["menuList"])]), _: 1 },
+            { default: i(() => [n(at, { menuList: k(r) }, null, 8, ["menuList"])]), _: 1 },
             8,
             ["default-active", "collapse"]
           )
@@ -416,11 +429,11 @@ const Xe = L(Ne, [
       };
     }
   }),
-  lt = L(ot, [["__scopeId", "data-v-f74ea3d4"]]),
+  lt = L(ot, [["__scopeId", "data-v-6eb92e6b"]]),
   ue = te("tagsView", () => {
     const t = A([]),
       e = A([]),
-      m = G(),
+      m = K(),
       r = le(),
       o = s => {
         t.value.some(a => a.path === s.path) ||
@@ -446,7 +459,7 @@ const Xe = L(Ne, [
           f > -1 && e.value.splice(f, 1), u([...e.value]);
         });
       },
-      w = s =>
+      x = s =>
         new Promise(a => {
           (t.value = t.value.filter(u => (u == null ? void 0 : u.meta.affix) || u.path === s.path)),
             a([...t.value]);
@@ -470,7 +483,7 @@ const Xe = L(Ne, [
         }),
       delOtherViews: s =>
         new Promise(a => {
-          w(s), I(s), a({ visitedViews: [...t.value], cachedViews: [...e.value] });
+          x(s), I(s), a({ visitedViews: [...t.value], cachedViews: [...e.value] });
         }),
       delLeftViews: s =>
         new Promise(a => {
@@ -517,8 +530,8 @@ const Xe = L(Ne, [
       }
     };
   }),
-  ct = { class: "scrollbar-flex-content" },
-  it = S({
+  it = { class: "scrollbar-flex-content" },
+  ct = S({
     __name: "index",
     setup(t) {
       const { proxy: e } = Ie(),
@@ -528,10 +541,10 @@ const Xe = L(Ne, [
         m.value.scrollLeft += v / 4;
       }
       const o = ue(),
-        { visitedViews: d } = ie(o),
+        { visitedViews: d } = ce(o),
         h = A(0),
         C = A(0),
-        w = A(!1),
+        x = A(!1),
         I = A(null),
         c = A({
           path: "",
@@ -540,16 +553,16 @@ const Xe = L(Ne, [
           query: {},
           meta: { title: "", affix: !1, keepAlive: !0 }
         }),
-        _ = G();
+        _ = K();
       ee(
         _,
         () => {
-          N(), K();
+          N(), U();
         },
         { immediate: !0 }
       ),
-        Ce(() => {
-          ee(w, p => {
+        ye(() => {
+          ee(x, p => {
             p
               ? document.body.addEventListener("click", F)
               : document.body.removeEventListener("click", F);
@@ -570,8 +583,8 @@ const Xe = L(Ne, [
             }
           });
       }
-      function K() {
-        ye(() => {
+      function U() {
+        Ce(() => {
           var p, v;
           for (const M of d.value)
             M.path === _.path &&
@@ -589,27 +602,27 @@ const Xe = L(Ne, [
               });
         });
       }
-      function U(p, v) {
-        var R, Z;
+      function Y(p, v) {
+        var E, Z;
         c.value = p;
         const M = v.target,
-          O = 105,
-          W = ((R = I.value) == null ? void 0 : R.getBoundingClientRect().left) || 0,
-          H = ((Z = I.value) == null ? void 0 : Z.getBoundingClientRect().width) || 0,
+          q = 105,
+          W = ((E = I.value) == null ? void 0 : E.getBoundingClientRect().left) || 0,
+          j = ((Z = I.value) == null ? void 0 : Z.getBoundingClientRect().width) || 0,
           { top: $, height: y } = M.getBoundingClientRect();
-        (h.value = v.clientX + O > W + H ? v.clientX - O : v.clientX + 20),
+        (h.value = v.clientX + q > W + j ? v.clientX - q : v.clientX + 20),
           (C.value = $ + y - 6),
-          (w.value = !0);
+          (x.value = !0);
       }
       function F() {
-        w.value = !1;
+        x.value = !1;
       }
       function J(p) {
         return _.name === p.name;
       }
       function de(p) {}
       function Q(p) {
-        return !1;
+        return p.meta.affix;
       }
       function s(p) {
         o.delView(p).then(v => {
@@ -630,52 +643,59 @@ const Xe = L(Ne, [
       }
       return (p, v) => {
         const M = T("Close"),
-          O = q,
+          q = z,
           W = T("router-link"),
-          H = $e,
-          $ = D;
+          j = $e,
+          $ = O;
         return (
-          i(),
-          k(
-            z,
+          l(),
+          g(
+            R,
             null,
             [
-              x(
+              V(
                 "div",
                 { ref_key: "container", ref: I },
                 [
                   n(
-                    H,
-                    { ref: "scrollContainer", height: "34px", onWheel: X(r, ["prevent"]) },
+                    j,
+                    { ref: "scrollContainer", height: "34px", onWheel: H(r, ["prevent"]) },
                     {
-                      default: l(() => [
-                        x("div", ct, [
-                          (i(!0),
-                          k(
-                            z,
+                      default: i(() => [
+                        V("div", it, [
+                          (l(!0),
+                          g(
+                            R,
                             null,
-                            ce(
-                              g(d),
+                            ie(
+                              k(d),
                               y => (
-                                i(),
-                                V(
+                                l(),
+                                w(
                                   W,
                                   {
                                     key: y.path,
                                     to: { path: y.path, query: y.query },
                                     class: ne(["tags-item", { active: J(y) }]),
-                                    onContextmenu: X(R => U(y, R), ["prevent"])
+                                    onContextmenu: H(E => Y(y, E), ["prevent"])
                                   },
                                   {
-                                    default: l(() => [
-                                      b(Y(y.meta.title) + " ", 1),
-                                      n(
-                                        O,
-                                        { size: 10, onClick: X(R => s(y), ["prevent", "stop"]) },
-                                        { default: l(() => [n(M)]), _: 2 },
-                                        1032,
-                                        ["onClick"]
-                                      )
+                                    default: i(() => [
+                                      b(G(y.meta.title) + " ", 1),
+                                      y.meta.affix
+                                        ? D("", !0)
+                                        : (l(),
+                                          w(
+                                            q,
+                                            {
+                                              key: 0,
+                                              size: 10,
+                                              onClick: H(E => s(y), ["prevent", "stop"])
+                                            },
+                                            { default: i(() => [n(M)]), _: 2 },
+                                            1032,
+                                            ["onClick"]
+                                          ))
                                     ]),
                                     _: 2
                                   },
@@ -696,40 +716,40 @@ const Xe = L(Ne, [
                 512
               ),
               be(
-                x(
+                V(
                   "ul",
                   { class: "tag-menu", style: re({ left: h.value + "px", top: C.value + "px" }) },
                   [
-                    x("li", { onClick: v[0] || (v[0] = y => (c.value, void 0)) }, [
+                    V("li", { onClick: v[0] || (v[0] = y => (c.value, void 0)) }, [
                       n($, { name: "refresh" }),
                       b(" 刷新 ")
                     ]),
                     Q(c.value)
-                      ? E("", !0)
-                      : (i(),
-                        k("li", { key: 0, onClick: v[1] || (v[1] = y => s(c.value)) }, [
+                      ? D("", !0)
+                      : (l(),
+                        g("li", { key: 0, onClick: v[1] || (v[1] = y => s(c.value)) }, [
                           n($, { name: "close" }),
                           b(" 关闭 ")
                         ])),
-                    x("li", { onClick: a }, [n($, { name: "close_other" }), b(" 关闭其它 ")]),
-                    (i(),
-                    k("li", { key: 1, onClick: u }, [
+                    V("li", { onClick: a }, [n($, { name: "close_other" }), b(" 关闭其它 ")]),
+                    (l(),
+                    g("li", { key: 1, onClick: u }, [
                       n($, { name: "close_left" }),
                       b(" 关闭左侧 ")
                     ])),
-                    (i(),
-                    k("li", { key: 2, onClick: f }, [
+                    (l(),
+                    g("li", { key: 2, onClick: f }, [
                       n($, { name: "close_right" }),
                       b(" 关闭右侧 ")
                     ])),
-                    x("li", { onClick: v[2] || (v[2] = y => P()) }, [
+                    V("li", { onClick: v[2] || (v[2] = y => P()) }, [
                       n($, { name: "close_all" }),
                       b(" 关闭所有 ")
                     ])
                   ],
                   4
                 ),
-                [[Se, w.value]]
+                [[Se, x.value]]
               )
             ],
             64
@@ -738,45 +758,45 @@ const Xe = L(Ne, [
       };
     }
   }),
-  rt = L(it, [["__scopeId", "data-v-1d5fac14"]]),
+  rt = L(ct, [["__scopeId", "data-v-549a6cac"]]),
   ut = S({
     __name: "index",
     setup(t) {
       const e = B(),
         m = ue(),
-        { cachedViews: r } = ie(m);
+        { cachedViews: r } = ce(m);
       return (o, d) => {
         const h = Te,
           C = Le,
-          w = T("router-view"),
+          x = T("router-view"),
           I = Me,
           c = Pe;
         return (
-          i(),
-          V(
+          l(),
+          w(
             c,
             { class: "common-layout" },
             {
-              default: l(() => [
+              default: i(() => [
                 n(
                   h,
                   {
-                    style: re({ width: g(e).sidebar.isActive ? "220px" : "65px" }),
+                    style: re({ width: k(e).sidebar.isActive ? "220px" : "65px" }),
                     class: "sidebar"
                   },
-                  { default: l(() => [n(st), b(), n(lt)]), _: 1 },
+                  { default: i(() => [n(st), b(), n(lt)]), _: 1 },
                   8,
                   ["style"]
                 ),
                 n(c, null, {
-                  default: l(() => [
-                    n(C, null, { default: l(() => [n(Qe)]), _: 1 }),
+                  default: i(() => [
+                    n(C, null, { default: i(() => [n(Qe)]), _: 1 }),
                     n(I, null, {
-                      default: l(() => [
+                      default: i(() => [
                         n(rt),
-                        n(w, null, {
-                          default: l(({ Component: _ }) => [
-                            (i(), V(Ae, { include: g(r) }, [(i(), V(j(_)))], 1032, ["include"]))
+                        n(x, null, {
+                          default: i(({ Component: _ }) => [
+                            (l(), w(Ae, { include: k(r) }, [(l(), w(X(_)))], 1032, ["include"]))
                           ]),
                           _: 1
                         })
@@ -794,5 +814,5 @@ const Xe = L(Ne, [
       };
     }
   }),
-  pt = L(ut, [["__scopeId", "data-v-3e20a2b3"]]);
-export { pt as default };
+  mt = L(ut, [["__scopeId", "data-v-3e20a2b3"]]);
+export { mt as default };

@@ -1,25 +1,25 @@
 import {
-  d as Z,
-  c as b,
-  g as ee,
-  b as te,
-  h as ne,
-  u as B,
-  $ as re,
+  a as Z,
+  H as b,
+  o as ee,
+  c as te,
+  q as ne,
+  u as J,
+  P as re,
   _ as le,
-  o as J,
-  X as $,
-  r as A,
-  a7 as H,
-  W,
+  K as B,
+  L as H,
+  C as A,
+  a7 as P,
+  J as j,
   a8 as ae,
   a9 as ie,
-  a0 as I,
+  Q as I,
   aa as se,
   ab as ue,
   ac as oe,
   ad as ce
-} from "./index-C1t76LZj.js";
+} from "./index-DWH8vS13.js";
 const fe = ["xlink:href", "fill"],
   de = Z({
     __name: "index",
@@ -41,24 +41,24 @@ const fe = ["xlink:href", "fill"],
             class: "svg-icon",
             style: re("width:" + e.size + ";height:" + e.size)
           },
-          [ne("use", { "xlink:href": B(t), fill: e.color }, null, 8, fe)],
+          [ne("use", { "xlink:href": J(t), fill: e.color }, null, 8, fe)],
           4
         )
       );
     }
   }),
   De = le(de, [["__scopeId", "data-v-8b87a405"]]);
-function j(e) {
+function q(e) {
   return ae() ? (ie(e), !0) : !1;
 }
 function R(e) {
-  return typeof e == "function" ? e() : B(e);
+  return typeof e == "function" ? e() : J(e);
 }
-const P = typeof window < "u" && typeof document < "u";
+const $ = typeof window < "u" && typeof document < "u";
 typeof WorkerGlobalScope < "u" && globalThis instanceof WorkerGlobalScope;
 const ve = Object.prototype.toString,
   pe = e => ve.call(e) === "[object Object]",
-  G = () => {};
+  K = () => {};
 function me(e, r) {
   function t(...i) {
     return new Promise((n, s) => {
@@ -69,8 +69,8 @@ function me(e, r) {
   }
   return t;
 }
-const K = e => e();
-function he(e = K) {
+const Q = e => e();
+function he(e = Q) {
   const r = A(!0);
   function t() {
     r.value = !1;
@@ -81,7 +81,7 @@ function he(e = K) {
   const n = (...s) => {
     r.value && e(...s);
   };
-  return { isActive: H(r), pause: t, resume: i, eventFilter: n };
+  return { isActive: P(r), pause: t, resume: i, eventFilter: n };
 }
 function ge(e) {
   return I();
@@ -89,27 +89,27 @@ function ge(e) {
 function we(...e) {
   if (e.length !== 1) return se(...e);
   const r = e[0];
-  return typeof r == "function" ? H(ue(() => ({ get: r, set: G }))) : A(r);
+  return typeof r == "function" ? P(ue(() => ({ get: r, set: K }))) : A(r);
 }
 function ye(e, r, t = {}) {
-  const { eventFilter: i = K, ...n } = t;
-  return W(e, me(i, r), n);
+  const { eventFilter: i = Q, ...n } = t;
+  return j(e, me(i, r), n);
 }
 function Se(e, r, t = {}) {
   const { eventFilter: i, ...n } = t,
     { eventFilter: s, pause: c, resume: u, isActive: o } = he(i);
   return { stop: ye(e, r, { ...n, eventFilter: s }), pause: c, resume: u, isActive: o };
 }
-function Q(e, r = !0, t) {
-  ge() ? J(e, t) : r ? e() : $(e);
+function G(e, r = !0, t) {
+  ge() ? B(e, t) : r ? e() : H(e);
 }
 function N(e) {
   var r;
   const t = R(e);
   return (r = t == null ? void 0 : t.$el) != null ? r : t;
 }
-const M = P ? window : void 0,
-  be = P ? window.document : void 0;
+const M = $ ? window : void 0,
+  be = $ ? window.document : void 0;
 function T(...e) {
   let r, t, i, n;
   if (
@@ -118,14 +118,14 @@ function T(...e) {
       : ([r, t, i, n] = e),
     !r)
   )
-    return G;
+    return K;
   Array.isArray(t) || (t = [t]), Array.isArray(i) || (i = [i]);
   const s = [],
     c = () => {
       s.forEach(v => v()), (s.length = 0);
     },
     u = (v, d, S, p) => (v.addEventListener(d, S, p), () => v.removeEventListener(d, S, p)),
-    o = W(
+    o = j(
       () => [N(r), R(n)],
       ([v, d]) => {
         if ((c(), !v)) return;
@@ -137,26 +137,26 @@ function T(...e) {
     f = () => {
       o(), c();
     };
-  return j(f), f;
+  return q(f), f;
 }
 function Fe() {
   const e = A(!1),
     r = I();
   return (
     r &&
-      J(() => {
+      B(() => {
         e.value = !0;
       }, r),
     e
   );
 }
-function X(e) {
+function U(e) {
   const r = Fe();
   return b(() => (r.value, !!e()));
 }
 function ke(e, r = {}) {
   const { window: t = M } = r,
-    i = X(() => t && "matchMedia" in t && typeof t.matchMedia == "function");
+    i = U(() => t && "matchMedia" in t && typeof t.matchMedia == "function");
   let n;
   const s = A(!1),
     c = f => {
@@ -173,13 +173,13 @@ function ke(e, r = {}) {
         (s.value = n.matches));
     });
   return (
-    j(() => {
+    q(() => {
       o(), u(), (n = void 0);
     }),
     s
   );
 }
-const z =
+const L =
     typeof globalThis < "u"
       ? globalThis
       : typeof window < "u"
@@ -189,12 +189,12 @@ const z =
           : typeof self < "u"
             ? self
             : {},
-  L = "__vueuse_ssr_handlers__",
+  z = "__vueuse_ssr_handlers__",
   Ee = Ce();
 function Ce() {
-  return L in z || (z[L] = z[L] || {}), z[L];
+  return z in L || (L[z] = L[z] || {}), L[z];
 }
-function U(e, r) {
+function X(e, r) {
   return Ee[e] || r;
 }
 function _e(e) {
@@ -226,7 +226,7 @@ const Me = {
     set: { read: e => new Set(JSON.parse(e)), write: e => JSON.stringify(Array.from(e)) },
     date: { read: e => new Date(e), write: e => e.toISOString() }
   },
-  q = "vueuse-storage";
+  W = "vueuse-storage";
 function Ae(e, r, t, i = {}) {
   var n;
   const {
@@ -246,7 +246,7 @@ function Ae(e, r, t, i = {}) {
     g = (v ? oe : A)(typeof r == "function" ? r() : r);
   if (!t)
     try {
-      t = U("getDefaultStorage", () => {
+      t = X("getDefaultStorage", () => {
         var a;
         return (a = M) == null ? void 0 : a.localStorage;
       })();
@@ -260,14 +260,14 @@ function Ae(e, r, t, i = {}) {
     { pause: O, resume: m } = Se(g, () => x(g.value), { flush: s, deep: c, eventFilter: S });
   d &&
     u &&
-    Q(() => {
-      T(d, "storage", F), T(d, q, D), w && F();
+    G(() => {
+      T(d, "storage", F), T(d, W, D), w && F();
     }),
     w || F();
   function E(a, h) {
     d &&
       d.dispatchEvent(
-        new CustomEvent(q, { detail: { key: e, oldValue: a, newValue: h, storageArea: t } })
+        new CustomEvent(W, { detail: { key: e, oldValue: a, newValue: h, storageArea: t } })
       );
   }
   function x(a) {
@@ -307,7 +307,7 @@ function Ae(e, r, t, i = {}) {
         } catch (h) {
           p(h);
         } finally {
-          a ? $(m) : m();
+          a ? H(m) : m();
         }
       }
     }
@@ -338,7 +338,7 @@ function Oe(e = {}) {
     p = b(() => (S.value ? "dark" : "light")),
     w = o || (c == null ? we(i) : Ae(c, i, s, { window: n, listenToStorageChanges: u })),
     g = b(() => (w.value === "auto" ? p.value : w.value)),
-    y = U("updateHTMLAttrs", (m, E, x) => {
+    y = X("updateHTMLAttrs", (m, E, x) => {
       const _ = typeof m == "string" ? (n == null ? void 0 : n.document.querySelector(m)) : N(m);
       if (!_) return;
       let F;
@@ -370,7 +370,7 @@ function Oe(e = {}) {
   function k(m) {
     e.onChanged ? e.onChanged(m, l) : l(m);
   }
-  W(g, k, { flush: "post", immediate: !0 }), Q(() => k(g.value));
+  j(g, k, { flush: "post", immediate: !0 }), G(() => k(g.value));
   const O = b({
     get() {
       return f ? w.value : g.value;
@@ -385,7 +385,7 @@ function Oe(e = {}) {
     return O;
   }
 }
-function ze(e = {}) {
+function Le(e = {}) {
   const { valueDark: r = "dark", valueLight: t = "", window: i = M } = e,
     n = Oe({
       ...e,
@@ -413,7 +413,7 @@ const V = [
   "mozfullscreenchange",
   "MSFullscreenChange"
 ];
-function Le(e, r = {}) {
+function ze(e, r = {}) {
   const { document: t = be, autoExit: i = !1 } = r,
     n = b(() => {
       var l;
@@ -456,7 +456,7 @@ function Le(e, r = {}) {
       "mozFullScreenElement",
       "msFullscreenElement"
     ].find(l => t && l in t),
-    v = X(() => n.value && t && c.value !== void 0 && u.value !== void 0 && o.value !== void 0),
+    v = U(() => n.value && t && c.value !== void 0 && u.value !== void 0 && o.value !== void 0),
     d = () => (f ? (t == null ? void 0 : t[f]) === n.value : !1),
     S = () => {
       if (o.value) {
@@ -495,8 +495,8 @@ function Le(e, r = {}) {
   return (
     T(t, V, y, !1),
     T(() => N(n), V, y, !1),
-    i && j(p),
+    i && q(p),
     { isSupported: v, isFullscreen: s, enter: w, exit: p, toggle: g }
   );
 }
-export { De as _, Le as a, ze as b, Ae as u };
+export { De as _, Le as a, Ae as b, ze as u };
