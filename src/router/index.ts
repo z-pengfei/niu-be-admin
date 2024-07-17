@@ -1,18 +1,21 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
+const Layout = () => import("@/layout/index.vue");
 
 import login from "./modules/login";
 import dashboard from "./modules/dashboard";
 import tablePage from "./modules/tablePage";
-import system from "./modules/system";
 import link from "./modules/link";
+import system from "./modules/system";
 
 // 静态路由
 export const constantRoutes: RouteRecordRaw[] = [
-  ...login,
-  ...dashboard,
-  ...tablePage,
-  ...system,
-  ...link
+  {
+    name: "/",
+    path: "/",
+    component: Layout,
+    redirect: "dashboard",
+    children: [...login, ...dashboard, ...tablePage, ...link, ...system]
+  }
 ];
 
 /**

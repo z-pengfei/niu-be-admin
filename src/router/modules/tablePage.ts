@@ -1,12 +1,9 @@
 import { RouteRecordRaw } from "vue-router";
 
-const Layout = () => import("@/layout/index.vue");
-
 export default [
   {
     name: "table",
     path: "/table",
-    component: Layout,
     meta: { icon: "Histogram", iconType: "el", title: "表格" },
     children: [
       {

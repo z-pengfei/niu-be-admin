@@ -1,12 +1,9 @@
 import { RouteRecordRaw } from "vue-router";
 
-const Layout = () => import("@/layout/index.vue");
-
 export default [
   {
     name: "system",
     path: "/system",
-    component: Layout,
     meta: { icon: "Tools", iconType: "el", title: "系统管理" },
     children: [
       {

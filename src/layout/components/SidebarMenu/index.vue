@@ -3,6 +3,7 @@
     :default-active="currentRoute.path"
     class="el-menu-vertical-demo"
     :collapse="!globalStore.sidebar.isActive"
+    :unique-opened="true"
   >
     <SidebarMenuItem :menuList="menuList"></SidebarMenuItem>
   </el-menu>
@@ -17,7 +18,7 @@ import { RouteRecordRaw, useRoute } from "vue-router";
 const globalStore = useGlobalStore();
 const currentRoute = useRoute();
 
-const menuList = ref<RouteRecordRaw[]>(constantRoutes);
+const menuList = ref<RouteRecordRaw[]>(constantRoutes[0].children as RouteRecordRaw[]);
 </script>
 
 <style lang="scss" scoped>

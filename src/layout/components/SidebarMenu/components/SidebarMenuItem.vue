@@ -1,25 +1,25 @@
 <template>
   <template v-for="item in menuList" :key="item.path">
-    <!-- 有下级，用el-sub-menu，无下级用el-menu-item -->
-    <el-sub-menu v-if="item.children?.length && !item.meta.hidden" :index="item.path">
-      <template #title>
+    <template v-if="!item.meta.hidden">
+      <!-- 有下级，用el-sub-menu，无下级用el-menu-item -->
+      <el-sub-menu v-if="item.children?.length" :index="item.path">
+        <template #title>
+          <el-icon>
+            <component v-if="item.meta.iconType == 'el'" :is="item.meta.icon"></component>
+            <SvgIcon v-else :name="item.meta.icon"></SvgIcon>
+          </el-icon>
+          <span> {{ item.meta.title }}</span>
+        </template>
+        <SidebarMenuItem :menuList="item.children" />
+      </el-sub-menu>
+      <el-menu-item v-else :index="item.path" @click="handleMenuIsLink(item)">
         <el-icon>
           <component v-if="item.meta.iconType == 'el'" :is="item.meta.icon"></component>
           <SvgIcon v-else :name="item.meta.icon"></SvgIcon>
         </el-icon>
         <span> {{ item.meta.title }}</span>
-      </template>
-      <SidebarMenuItem :menuList="item.children" />
-    </el-sub-menu>
-    <el-menu-item v-else-if="!item.meta.hidden" :index="item.path" @click="handleMenuIsLink(item)">
-      <template #title>
-        <el-icon>
-          <component v-if="item.meta.iconType == 'el'" :is="item.meta.icon"></component>
-          <SvgIcon v-else :name="item.meta.icon"></SvgIcon>
-        </el-icon>
-        <span> {{ item.meta.title }}</span>
-      </template>
-    </el-menu-item>
+      </el-menu-item>
+    </template>
   </template>
 </template>
 
