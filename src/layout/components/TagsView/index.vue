@@ -10,7 +10,9 @@
           @contextmenu.prevent="openTagMenu(item, $event)"
         >
           {{ item.meta.title }}
-          <el-icon :size="10" @click.prevent.stop="closeSelectedTag(item)"><Close /></el-icon>
+          <el-icon v-if="!item.meta.affix" :size="10" @click.prevent.stop="closeSelectedTag(item)"
+            ><Close
+          /></el-icon>
         </router-link>
       </div>
     </el-scrollbar>
@@ -162,7 +164,7 @@ function isActive(tag: TagView) {
 
 function refreshSelectedTag(tag: TagView) {}
 function isAffix(tag: TagView) {
-  return false;
+  return tag.meta.affix;
 }
 function closeSelectedTag(view: TagView) {
   tagsViewStore.delView(view).then((res: any) => {
