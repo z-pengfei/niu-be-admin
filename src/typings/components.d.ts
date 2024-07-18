@@ -7,6 +7,7 @@ export {};
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AtjuboTable: typeof import('./../components/AtjuboTable/index.vue')['default']
     Collapse: typeof import('./../layout/components/Header/components/Collapse.vue')['default']
     Dark: typeof import('./../layout/components/Header/components/Dark.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']

@@ -20,7 +20,7 @@
 
   <!-- tag标签操作菜单 -->
   <ul v-show="tagMenuVisible" class="tag-menu" :style="{ left: left + 'px', top: top + 'px' }">
-    <li @click="refreshSelectedTag(selectedTag)">
+    <li @click="refreshSelectedTag()">
       <SvgIcon name="refresh" />
       刷新
     </li>
@@ -40,7 +40,7 @@
       <SvgIcon name="close_right" />
       关闭右侧
     </li>
-    <li @click="closeAllTags()">
+    <li @click="closeAllTags(selectedTag)">
       <SvgIcon name="close_all" />
       关闭所有
     </li>
@@ -162,9 +162,13 @@ function isActive(tag: TagView) {
   return route.name === tag.name;
 }
 
-function refreshSelectedTag(tag: TagView) {}
-function isAffix(tag: TagView) {
-  return tag.meta.affix;
+function refreshSelectedTag() {
+  tagsViewStore.delOtherViews(selectedTag.value).then(() => {
+    tagsViewStore.toFirstView(selectedTag.value);
+  });
+}
+function isAffix(view: TagView) {
+  return view.meta.affix;
 }
 function closeSelectedTag(view: TagView) {
   tagsViewStore.delView(view).then((res: any) => {
@@ -177,19 +181,30 @@ function closeOtherTags() {
   tagsViewStore.delOtherViews(selectedTag.value);
 }
 function isFirstView() {
-  return false;
+  return selectedTag.value.fullPath === tagsViewStore.visitedViews[0].fullPath;
 }
 function closeLeftTags() {
-  tagsViewStore.delLeftViews(selectedTag.value);
+  tagsViewStore.delLeftViews(selectedTag.value).then(() => {
+    if (!isActive(selectedTag.value)) {
+      tagsViewStore.toFirstView(selectedTag.value);
+    }
+  });
 }
 function isLastView() {
-  return false;
+  return (
+    selectedTag.value.fullPath ===
+    tagsViewStore.visitedViews[tagsViewStore.visitedViews.length - 1]?.fullPath
+  );
 }
 function closeRightTags() {
-  tagsViewStore.delRightViews(selectedTag.value);
+  tagsViewStore.delRightViews(selectedTag.value).then((res: any) => {
+    tagsViewStore.toLastView(res.visitedViews, selectedTag.value);
+  });
 }
-function closeAllTags() {
-  tagsViewStore.delAllViews();
+function closeAllTags(view: TagView) {
+  tagsViewStore.delAllViews().then((res: any) => {
+    tagsViewStore.toLastView(res.visitedViews, view);
+  });
 }
 </script>
 

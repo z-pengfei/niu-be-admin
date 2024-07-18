@@ -201,8 +201,8 @@ export const useTagsViewStore = defineStore("tagsView", () => {
     });
   };
 
-  const isActive = (tag: TagView) => {
-    return tag.path === route.path;
+  const isActive = (view: TagView) => {
+    return view.path === route.path;
   };
 
   const toLastView = (visitedViews: TagView[], view?: TagView) => {
@@ -217,6 +217,11 @@ export const useTagsViewStore = defineStore("tagsView", () => {
       }
     }
   };
+  const toFirstView = (view: TagView) => {
+    if (view?.fullPath) {
+      router.replace(view?.fullPath);
+    }
+  };
 
   return {
     visitedViews,
@@ -229,6 +234,7 @@ export const useTagsViewStore = defineStore("tagsView", () => {
     delAllViews,
     updateVisitedView,
     isActive,
-    toLastView
+    toLastView,
+    toFirstView
   };
 });
