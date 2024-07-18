@@ -140,7 +140,7 @@ function moveToCurrentTag() {
   });
 }
 
-function openTagMenu(tag: TagView, e: MouseEvent) {
+const openTagMenu = (tag: TagView, e: MouseEvent) => {
   selectedTag.value = tag;
   const targetElement = e.target as HTMLElement;
   const menuMinWidth = 105;
@@ -152,60 +152,60 @@ function openTagMenu(tag: TagView, e: MouseEvent) {
     e.clientX + menuMinWidth > pLeft + pWidth ? e.clientX - menuMinWidth : e.clientX + 20;
   top.value = offsetTop + offsetHeight - 6;
   tagMenuVisible.value = true;
-}
+};
 
-function closeTagMenu() {
+const closeTagMenu = () => {
   tagMenuVisible.value = false;
-}
+};
 
-function isActive(tag: TagView) {
+const isActive = (tag: TagView) => {
   return route.name === tag.name;
-}
+};
 
-function refreshSelectedTag() {
+const refreshSelectedTag = () => {
   tagsViewStore.delOtherViews(selectedTag.value).then(() => {
     tagsViewStore.toFirstView(selectedTag.value);
   });
-}
-function isAffix(view: TagView) {
+};
+const isAffix = (view: TagView) => {
   return view.meta.affix;
-}
-function closeSelectedTag(view: TagView) {
+};
+const closeSelectedTag = (view: TagView) => {
   tagsViewStore.delView(view).then((res: any) => {
     if (tagsViewStore.isActive(view)) {
       tagsViewStore.toLastView(res.visitedViews, view);
     }
   });
-}
-function closeOtherTags() {
+};
+const closeOtherTags = () => {
   tagsViewStore.delOtherViews(selectedTag.value);
-}
-function isFirstView() {
+};
+const isFirstView = () => {
   return selectedTag.value.fullPath === tagsViewStore.visitedViews[0].fullPath;
-}
-function closeLeftTags() {
+};
+const closeLeftTags = () => {
   tagsViewStore.delLeftViews(selectedTag.value).then(() => {
     if (!isActive(selectedTag.value)) {
       tagsViewStore.toFirstView(selectedTag.value);
     }
   });
-}
-function isLastView() {
+};
+const isLastView = () => {
   return (
     selectedTag.value.fullPath ===
     tagsViewStore.visitedViews[tagsViewStore.visitedViews.length - 1]?.fullPath
   );
-}
-function closeRightTags() {
+};
+const closeRightTags = () => {
   tagsViewStore.delRightViews(selectedTag.value).then((res: any) => {
     tagsViewStore.toLastView(res.visitedViews, selectedTag.value);
   });
-}
-function closeAllTags(view: TagView) {
+};
+const closeAllTags = (view: TagView) => {
   tagsViewStore.delAllViews().then((res: any) => {
     tagsViewStore.toLastView(res.visitedViews, view);
   });
-}
+};
 </script>
 
 <style lang="scss" scoped>
