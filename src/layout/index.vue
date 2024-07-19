@@ -7,13 +7,15 @@
       <el-header><Header /></el-header>
       <el-main>
         <TagsView />
-        <router-view>
-          <template #default="{ Component }">
-            <keep-alive :include="cachedViews">
-              <component :is="Component" />
-            </keep-alive>
-          </template>
-        </router-view>
+        <div class="wrapper">
+          <router-view>
+            <template #default="{ Component }">
+              <keep-alive :include="cachedViews">
+                <component :is="Component" />
+              </keep-alive>
+            </template>
+          </router-view>
+        </div>
       </el-main>
     </el-container>
   </el-container>
@@ -43,10 +45,16 @@ const { cachedViews } = storeToRefs(tagsViewStore);
   height: auto;
 }
 .el-main {
-  padding-top: 0;
+  padding: 0;
 }
 .el-aside {
   border-right: 1px solid var(--el-menu-border-color);
   transition: width 0.58s;
+}
+.wrapper {
+  border: 8px #eeeeee solid;
+  padding: 8px;
+  height: calc(100vh - 56px - 34px);
+  width: 100%;
 }
 </style>

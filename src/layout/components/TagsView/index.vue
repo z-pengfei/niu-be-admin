@@ -209,10 +209,6 @@ const closeAllTags = (view: TagView) => {
 </script>
 
 <style lang="scss" scoped>
-.el-scrollbar {
-  height: 40px;
-}
-
 .scrollbar-flex-content {
   display: flex;
 }
