@@ -1,6 +1,6 @@
 <template>
   <div ref="container">
-    <el-scrollbar ref="scrollContainer" height="34px" @wheel.prevent="handleScroll">
+    <el-scrollbar ref="scrollContainer" height="34px" class="px-8px" @wheel.prevent="handleScroll">
       <div class="scrollbar-flex-content">
         <router-link
           v-for="item in visitedViews"
