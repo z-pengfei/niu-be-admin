@@ -17,6 +17,12 @@ export default [
         path: "/table/jspreadsheet",
         component: () => import("@/views/table/jspreadsheet/index.vue"),
         meta: { icon: "Document", iconType: "el", title: "jspreadsheet" }
+      },
+      {
+        name: "split",
+        path: "/system/split",
+        component: () => import("@/views/table/split/index.vue"),
+        meta: { icon: "BellFilled", iconType: "el", title: "分割组件" }
       }
     ]
   }
