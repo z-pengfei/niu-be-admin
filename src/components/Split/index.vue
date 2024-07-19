@@ -60,7 +60,7 @@ onUnmounted(() => {
 .split-view {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 122px);
   width: 100%;
   overflow: hidden;
 }
