@@ -2,7 +2,7 @@
   <div class="project-title">
     <transition name="sidebarLogoFade">
       <router-link v-if="!globalStore.sidebar.isActive" key="collapse" to="/">
-        <SvgIcon name="logo" size="20" />
+        <SvgIcon name="niube-logo" size="80" />
       </router-link>
 
       <router-link v-else key="expand" to="/">
