@@ -14,7 +14,7 @@ import {
   g as P,
   E as z,
   h as le,
-  i as b,
+  i as C,
   j as me,
   k as he,
   l as ve,
@@ -34,10 +34,10 @@ import {
   C as A,
   D as ke,
   G as ye,
-  H as Ce,
+  H as be,
   I as de,
   J as se,
-  K as be,
+  K as Ce,
   L as Se,
   M as K,
   N as Ie,
@@ -50,8 +50,8 @@ import {
   V as Me,
   W as Ee,
   X as Re
-} from "./index-CeVMKrt0.js";
-import { _ as O, u as De, a as Oe } from "./index-xU_z6RNW.js";
+} from "./index-DcxNABBM.js";
+import { _ as O, u as De, a as Oe } from "./index-COPllbn5.js";
 /* empty css                  */ /* empty css                     */ const B = ae("global", () => {
     const t = fe({ isActive: !1 });
     return {
@@ -138,7 +138,7 @@ import { _ as O, u as De, a as Oe } from "./index-xU_z6RNW.js";
       return (u, a) => {
         const _ = L("Sunny"),
           v = z,
-          C = le,
+          b = le,
           x = L("Moon");
         return (
           i(),
@@ -147,7 +147,7 @@ import { _ as O, u as De, a as Oe } from "./index-xU_z6RNW.js";
               ? P("", !0)
               : (i(),
                 w(
-                  C,
+                  b,
                   { key: 0, content: "明亮模式" },
                   {
                     default: c(() => [
@@ -159,7 +159,7 @@ import { _ as O, u as De, a as Oe } from "./index-xU_z6RNW.js";
             k(e)
               ? (i(),
                 w(
-                  C,
+                  b,
                   { key: 1, content: "暗黑模式" },
                   {
                     default: c(() => [
@@ -198,8 +198,8 @@ function Xe(t, e) {
           dropdown: c(() => [
             s(u, null, {
               default: c(() => [
-                s(h, null, { default: c(() => [b(" 修改密码 ")]), _: 1 }),
-                s(h, { divided: "" }, { default: c(() => [b(" 注销 ")]), _: 1 })
+                s(h, null, { default: c(() => [C(" 修改密码 ")]), _: 1 }),
+                s(h, { divided: "" }, { default: c(() => [C(" 注销 ")]), _: 1 })
               ]),
               _: 1
             })
@@ -256,7 +256,7 @@ const Ge = T(We, [
     }
   }),
   et = T(Ze, [["__scopeId", "data-v-0fa5976d"]]),
-  tt = t => (ie("data-v-8996f933"), (t = t()), ce(), t),
+  tt = t => (ie("data-v-22360ee7"), (t = t()), ce(), t),
   nt = { class: "project-title" },
   st = tt(() => V("span", { class: "font-bold text-xl" }, "niu-be-admin", -1)),
   at = S({
@@ -280,7 +280,7 @@ const Ge = T(We, [
                       w(
                         _,
                         { key: "collapse", to: "/" },
-                        { default: c(() => [s(a, { name: "logo", size: "20" })]), _: 1 }
+                        { default: c(() => [s(a, { name: "niube-logo", size: "80" })]), _: 1 }
                       ))
                 ]),
                 _: 1
@@ -291,7 +291,7 @@ const Ge = T(We, [
       };
     }
   }),
-  ot = T(at, [["__scopeId", "data-v-8996f933"]]),
+  ot = T(at, [["__scopeId", "data-v-22360ee7"]]),
   lt = S({
     __name: "SidebarMenuItem",
     props: { menuList: { type: Array, required: !0 } },
@@ -304,7 +304,7 @@ const Ge = T(We, [
       return (u, a) => {
         const _ = O,
           v = z,
-          C = L("SidebarMenuItem", !0),
+          b = L("SidebarMenuItem", !0),
           x = Ve,
           I = ge;
         return (
@@ -353,7 +353,7 @@ const Ge = T(We, [
                                       V("span", null, Y(o.meta.title), 1)
                                     ]),
                                     default: c(() => [
-                                      s(C, { menuList: o.children }, null, 8, ["menuList"])
+                                      s(b, { menuList: o.children }, null, 8, ["menuList"])
                                     ]),
                                     _: 2
                                   },
@@ -452,7 +452,7 @@ const Ge = T(We, [
             }
           l([...t.value]);
         }),
-      C = n => {
+      b = n => {
         const l = n.name;
         return new Promise(d => {
           const f = e.value.indexOf(l);
@@ -479,7 +479,7 @@ const Ge = T(We, [
       },
       delView: n =>
         new Promise(l => {
-          v(n), C(n), l({ visitedViews: [...t.value], cachedViews: [...e.value] });
+          v(n), b(n), l({ visitedViews: [...t.value], cachedViews: [...e.value] });
         }),
       delOtherViews: n =>
         new Promise(l => {
@@ -538,7 +538,7 @@ const Ge = T(We, [
     __name: "index",
     setup(t) {
       const { proxy: e } = Ae(),
-        h = Ce(() => (e == null ? void 0 : e.$refs.scrollContainer.$refs.wrapRef));
+        h = be(() => (e == null ? void 0 : e.$refs.scrollContainer.$refs.wrapRef));
       function u(r) {
         const m = r.wheelDelta || -r.deltaY * 40;
         h.value.scrollLeft += m / 4;
@@ -546,7 +546,7 @@ const Ge = T(We, [
       const a = pe(),
         { visitedViews: _ } = de(a),
         v = A(0),
-        C = A(0),
+        b = A(0),
         x = A(!1),
         I = A(null),
         o = A({
@@ -564,7 +564,7 @@ const Ge = T(We, [
         },
         { immediate: !0 }
       ),
-        be(() => {
+        Ce(() => {
           se(x, r => {
             r
               ? document.body.addEventListener("click", W)
@@ -614,7 +614,7 @@ const Ge = T(We, [
             G = ((ne = I.value) == null ? void 0 : ne.getBoundingClientRect().width) || 0,
             { top: $, height: y } = M.getBoundingClientRect();
           (v.value = m.clientX + q > X + G ? m.clientX - q : m.clientX + 20),
-            (C.value = $ + y - 6),
+            (b.value = $ + y - 6),
             (x.value = !0);
         },
         W = () => {
@@ -703,7 +703,7 @@ const Ge = T(We, [
                                   },
                                   {
                                     default: c(() => [
-                                      b(Y(y.meta.title) + " ", 1),
+                                      C(Y(y.meta.title) + " ", 1),
                                       y.meta.affix
                                         ? P("", !0)
                                         : (i(),
@@ -740,37 +740,37 @@ const Ge = T(We, [
               Ie(
                 V(
                   "ul",
-                  { class: "tag-menu", style: _e({ left: v.value + "px", top: C.value + "px" }) },
+                  { class: "tag-menu", style: _e({ left: v.value + "px", top: b.value + "px" }) },
                   [
                     V("li", { onClick: m[0] || (m[0] = y => ee()) }, [
                       s($, { name: "refresh" }),
-                      b(" 刷新 ")
+                      C(" 刷新 ")
                     ]),
                     te(o.value)
                       ? P("", !0)
                       : (i(),
                         g("li", { key: 0, onClick: m[1] || (m[1] = y => H(o.value)) }, [
                           s($, { name: "close" }),
-                          b(" 关闭 ")
+                          C(" 关闭 ")
                         ])),
-                    V("li", { onClick: n }, [s($, { name: "close_other" }), b(" 关闭其它 ")]),
+                    V("li", { onClick: n }, [s($, { name: "close_other" }), C(" 关闭其它 ")]),
                     l()
                       ? P("", !0)
                       : (i(),
                         g("li", { key: 1, onClick: d }, [
                           s($, { name: "close_left" }),
-                          b(" 关闭左侧 ")
+                          C(" 关闭左侧 ")
                         ])),
                     f()
                       ? P("", !0)
                       : (i(),
                         g("li", { key: 2, onClick: E }, [
                           s($, { name: "close_right" }),
-                          b(" 关闭右侧 ")
+                          C(" 关闭右侧 ")
                         ])),
                     V("li", { onClick: m[2] || (m[2] = y => F(o.value)) }, [
                       s($, { name: "close_all" }),
-                      b(" 关闭所有 ")
+                      C(" 关闭所有 ")
                     ])
                   ],
                   4
@@ -794,7 +794,7 @@ const Ge = T(We, [
         { cachedViews: u } = de(h);
       return (a, _) => {
         const v = Te,
-          C = Me,
+          b = Me,
           x = L("router-view"),
           I = Ee,
           o = Re;
@@ -811,13 +811,13 @@ const Ge = T(We, [
                     style: _e({ width: k(e).sidebar.isActive ? "220px" : "65px" }),
                     class: "sidebar"
                   },
-                  { default: c(() => [s(ot), b(), s(ct)]), _: 1 },
+                  { default: c(() => [s(ot), C(), s(ct)]), _: 1 },
                   8,
                   ["style"]
                 ),
                 s(o, null, {
                   default: c(() => [
-                    s(C, null, { default: c(() => [s(et)]), _: 1 }),
+                    s(b, null, { default: c(() => [s(et)]), _: 1 }),
                     s(I, null, {
                       default: c(() => [
                         s(dt),
