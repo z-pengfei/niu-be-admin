@@ -17,10 +17,24 @@ export const useTagsViewStore = defineStore("tagsView", () => {
     if (visitedViews.value.some(v => v.path === view.path)) {
       return;
     }
+
     if (view.meta.affix) {
       visitedViews.value.unshift(view);
     } else {
       visitedViews.value.push(view);
+    }
+    // 固定首页在第一个
+    if (!visitedViews.value.filter(v => v.name === "dashboard").length) {
+      visitedViews.value.unshift({
+        name: "dashboard",
+        path: "/dashboard",
+        fullPath: "/dashboard",
+        meta: {
+          title: "首页",
+          affix: true,
+          keepAlive: false
+        }
+      });
     }
   };
 
@@ -80,7 +94,7 @@ export const useTagsViewStore = defineStore("tagsView", () => {
    * 关闭其它缓存路由
    */
   const delOtherCachedViews = (view: TagView) => {
-    const viewName = view.name as string;
+    const viewName = view.name;
     return new Promise(resolve => {
       const index = cachedViews.value.indexOf(viewName);
       if (index > -1) {

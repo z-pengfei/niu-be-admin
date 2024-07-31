@@ -77,9 +77,10 @@
 </template>
 
 <script setup lang="ts">
-import { LoginData } from "@/api/login/type";
+import { LoginRequestData } from "@/api/login/type";
 import router from "@/router";
 import { decrypt, encrypt } from "@/utils/rsaEncrypt";
+import { userLogin } from "@/api/login/index";
 
 const passwordVisible = ref(false); // 密码是否可见
 const loginFormRef = ref(ElForm); // 登录表单ref
@@ -87,7 +88,7 @@ const captchaBase64 = ref(); // 验证码图片Base64字符串
 const loading = ref(false); // 按钮loading
 const rememberMe = ref(false); // 记住我
 
-const loginData = ref<LoginData>({
+const loginData = ref<LoginRequestData>({
   username: "",
   password: "",
   captchaCode: ""
@@ -117,14 +118,21 @@ const checkPassword = (rule: any, value: any, callback: any) => {
 /**
  * 登录
  */
-const handleLogin = () => {
-  loginFormRef.value.validate((valid: boolean) => {
-    if (valid) {
+const handleLogin = async () => {
+  await userLogin({ username: loginData.value.username, password: loginData.value.password }).then(
+    res => {
       loading.value = false;
       encryptWay();
       router.push("/");
     }
-  });
+  );
+  // loginFormRef.value.validate((valid: boolean) => {
+  //   if (valid) {
+  //     loading.value = false;
+  //     encryptWay();
+  //     router.push("/");
+  //   }
+  // });
 };
 
 /**
